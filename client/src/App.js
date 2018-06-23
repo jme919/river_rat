@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { NavBar } from "./components/NavBar";
 import "./App.css";
+import { GoogleApiWrapper } from "google-maps-react";
+import MapContainer from "./MapContainer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="button">Test Bulma Button</a>
+        <NavBar />
+        <h1> Google Maps API + React </h1> //title
+        //IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
+        <MapContainer google = { this.props.google } />
       </div>
     );
   }
 }
-
-export default App;
+// IMPORTANT: Exporting the App component with the GoogleApiWrapper. You pass it down with an object containing your API key
+export default GoogleApiWrapper ({
+  apiKey: "your-api-key",
+}) (App);
