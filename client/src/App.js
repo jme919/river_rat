@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
+import { LoginForm } from "./components/LoginForm";
+// import Google Maps API Wrapper from google-maps-react
 import { GoogleApiWrapper } from "google-maps-react";
+// import child component
 import MapContainer from "./MapContainer";
 
 class App extends Component {
@@ -9,14 +12,14 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <h1> Google Maps API + React </h1> //title
-        //IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
-        <MapContainer google = { this.props.google } />
+        <h1> Parks </h1>
+        // IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
+        <MapContainer google={this.props.google} />
       </div>
     );
   }
 }
 // IMPORTANT: Exporting the App component with the GoogleApiWrapper. You pass it down with an object containing your API key
-export default GoogleApiWrapper ({
+export default GoogleApiWrapper({
   apiKey: "your-api-key",
-}) (App);
+})(App);
