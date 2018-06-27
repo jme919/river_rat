@@ -7,3 +7,9 @@ export default {
     return axios.get("/api/recipes", { params: { q: query } });
   }
 };
+
+export default {
+  getMaps: function(query) {
+    return axios.get("/api/parks", { params: { q: query } })
+  }
+};
