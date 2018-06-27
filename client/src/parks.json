@@ -55,8 +55,8 @@
         }
     },
     {
-        "id": 1,
-        "name": "Pony Pasture",
+        "id": 5,
+        "name": "Hugenot Flatwater",
         "image": "",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
         "location": "",
@@ -68,8 +68,8 @@
         }
     },
     {
-        "id": 1,
-        "name": "Pony Pasture",
+        "id": 6,
+        "name": "42nd Street",
         "image": "",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
         "location": "",
@@ -81,8 +81,8 @@
         }
     },
     {
-        "id": 1,
-        "name": "Pony Pasture",
+        "id": 7,
+        "name": "The Wetlands",
         "image": "",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
         "location": "",
@@ -94,8 +94,8 @@
         }
     },
     {
-        "id": 1,
-        "name": "Pony Pasture",
+        "id": 8,
+        "name": "Ancarrow's Landing",
         "image": "",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
         "location": "",
@@ -105,31 +105,7 @@
             "water fountain": "Yes",
             "canoe ramp": "Yes"
         }
-    },
-    {
-        "id": 1,
-        "name": "Pony Pasture",
-        "image": "",
-        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
-        "location": "",
-        "ammenities": {
-            "parking": "Yes",
-            "bike racks": "Yes",
-            "water fountain": "Yes",
-            "canoe ramp": "Yes"
-        }
-    },
-    {
-        "id": 1,
-        "name": "Pony Pasture",
-        "image": "",
-        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
-        "location": "",
-        "ammenities": {
-            "parking": "Yes",
-            "bike racks": "Yes",
-            "water fountain": "Yes",
-            "canoe ramp": "Yes"
-        }
-    },
+    }
+    
+    
 ]
