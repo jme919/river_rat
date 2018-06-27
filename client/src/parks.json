@@ -1,0 +1,111 @@
+[
+    {
+        "id": 1,
+        "name": "Pony Pasture",
+        "image": "",
+        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists. 7200 Riverside Dr.; parking for 150 cars",
+        "location": "",
+        "ammenities":{
+            "parking":"Yes",
+            "bike racks": "Yes",
+            "water fountain":"Yes",
+            "canoe ramp": "Yes",
+            "bathroom": "Yes"
+
+        }
+    },
+    {
+        "id": 2,
+        "name": "Pipeline",
+        "image": "",
+        "description": "From the parking lot, you walk to a metal ladder then descend to the metal catwalk atop the pipeline, which offers views of the Pipeline Rapids. The pipeline carries storm water to a holding tank located beyond the Mayo Bridge. Please pay attention to water levels for safety’s sake. There is a bike rack and although the ladder at the eastern end of the catwalk is still an obstacle for some, there is a new wooden staircase. The closest place to put in is the ramp near the Belle Island parking lot",
+        "location": "End of South 12th St., 7 spaces for cars",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "No",
+            "canoe ramp": "No",
+            "bathroom": "No"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Manchester Climbing Wall",
+        "image": "",
+        "description": "This climbing area, under the Manchester Bridge in downtown Richmond, is a series of abandoned train trestles that have been equipped with bolts and shutts. Here climbers can hone their skills of leading, both trad and sport, rappelling, and self-rescue. There is a parking lot accessible from the streets off 7th St., take Semmes to the Floodwall parking lot, just before the entrance onto the Manchester Bridge going north and follow the path down near the railroad tracks.",
+        "location": "",
+        "ammenities": {
+            "parking": "No",
+            "bike racks": "No",
+            "water fountain": "No",
+            "canoe ramp": "No"
+        }
+    },
+    {
+        "id": 4,
+        "name": "T. Tyler Potterfield Memorial Bridge",
+        "image": "",
+        "description": "The physical link between Brown’s Island and Manchester, this pedestrian and cycling pathway sits atop a former hydroelectric dam, some 20 feet above the river. The bridge provides unequaled river vistas, panoramic views of the downtown skyline, along with sounds that belie the extraordinarily close relationship of the bridge to the roaring river. The wheelchair accessible bridge is open to pedestrians and cyclists 24 hours a day. Access is provided from either side of the river: Brown’s Island on the north and from Semmes Ave. on the south side. Southside has 15 parking spaces in lot between Semmes Ave. and 7th Street, also parking along 7th street. Northside has parking in lot off Tredegar street; about 50 spaces.  ",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes (Northside only)",
+            "water fountain": "Yes",
+            "canoe ramp": "No"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Hugenot Flatwater",
+        "image": "",
+        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "Yes",
+            "canoe ramp": "Yes"
+        }
+    },
+    {
+        "id": 6,
+        "name": "42nd Street",
+        "image": "",
+        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "Yes",
+            "canoe ramp": "Yes"
+        }
+    },
+    {
+        "id": 7,
+        "name": "The Wetlands",
+        "image": "",
+        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "Yes",
+            "canoe ramp": "Yes"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Ancarrow's Landing",
+        "image": "",
+        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "Yes",
+            "canoe ramp": "Yes"
+        }
+    }
+    
+    
+]

@@ -4,6 +4,12 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
+const mongoose = require("mongoose");
+
+
+//Make sure that this is the correct thing to do here
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/river_rat");
+
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,6 +22,8 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 // Use apiRoutes
 app.use("/api", apiRoutes);
+
+
 
 // Send every other request to the React app
 // Define any API routes before this runs
