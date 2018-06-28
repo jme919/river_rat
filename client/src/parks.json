@@ -38,7 +38,8 @@
             "parking": "No",
             "bike racks": "No",
             "water fountain": "No",
-            "canoe ramp": "No"
+            "canoe ramp": "No",
+            "bathroom":"No"
         }
     },
     {
@@ -51,37 +52,27 @@
             "parking": "Yes",
             "bike racks": "Yes (Northside only)",
             "water fountain": "Yes",
-            "canoe ramp": "No"
+            "canoe ramp": "No",
+            "bathroom":"Yes"
         }
     },
     {
         "id": 5,
         "name": "Hugenot Flatwater",
         "image": "",
-        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "description": "Canoeing, kayaking, rafting, tubing, swimming, fishing, biking, hiking, running and exploring. The takeout has access to good, calm flat water at water levels below five feet. Try a fun paddle up the James to Bosher’s Dam from Huguenot Flatwater. It is also a great place to try a paddle downriver to Williams Island and paddle pack to Huguenot, hop out at Pony Pasture, or to continue to points beyond. There are many fishing holes and calm spots to anchor your boat to cast a line in this section of the James. When the water levels are low, many granite boulders can be accessed by walking or with a short swim. The trails of Huguenot Flatwater are well-shaded, well-marked and there are plenty of spots to stop and watch the James flow by. The parking lot has space for about 35 cars, and there is a second lot with about 10 spaces on Riverside Drive at Oxford Parkway. Parking: 8600 Riverside Dr, just west of the Huguenot Bridge; parking for 35 cars",
         "location": "",
         "ammenities": {
             "parking": "Yes",
             "bike racks": "Yes",
-            "water fountain": "Yes",
-            "canoe ramp": "Yes"
+            "water fountain": "No",
+            "canoe ramp": "Yes",
+            "bathroom":"Yes"
         }
     },
+    
     {
         "id": 6,
-        "name": "42nd Street",
-        "image": "",
-        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
-        "location": "",
-        "ammenities": {
-            "parking": "Yes",
-            "bike racks": "Yes",
-            "water fountain": "Yes",
-            "canoe ramp": "Yes"
-        }
-    },
-    {
-        "id": 7,
         "name": "The Wetlands",
         "image": "",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
@@ -90,20 +81,36 @@
             "parking": "Yes",
             "bike racks": "Yes",
             "water fountain": "Yes",
-            "canoe ramp": "Yes"
+            "canoe ramp": "Yes",
+            "bathroom":"No"
+        }
+    },
+    {
+        "id": 7,
+        "name": "North Bank Park (Texas Beach)",
+        "image": "",
+        "description": "The calm shallow waters and slower rapids make Texas Beach one of the safest water access points within the Park for wading and swimming. The area is great for snorkeling and there is plenty to explore: fish, turtles, shells, snails and unusual river-bottom features.Take the trail from the parking lot, cross the bridge over the train tracks, down the stairs then wander till you find a spot to your liking. Along with the newly completed wooden boardwalk over a wetland section of trail, you’ll find many isolated sandy beaches, sunbathing rocks and shady spots to enjoy.",
+        "location": "",
+        "ammenities": {
+            "parking": "Yes",
+            "bike racks": "Yes",
+            "water fountain": "Yes",
+            "canoe ramp": "No",
+            "bathroom":"Yes"
         }
     },
     {
         "id": 8,
         "name": "Ancarrow's Landing",
         "image": "",
-        "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists",
+        "description": "Ancarrow’s includes the beginning of the Richmond Slave Trail. This self-guided trail covers nearly three miles and travels west along the James River, crossing to the northside of the river. This park section is a prime spot for the running of the shad every spring. The trail loop is accessible from the east side of Ancarrow’s landing offers family-friendly riding for beginning mountain bikers. Parking: 200 Branders St., parking for 100 cars and trailers. To get there, take the Maury St. exit off I-95 and turn right, follow the road to the end of Brander St.",
         "location": "",
         "ammenities": {
             "parking": "Yes",
-            "bike racks": "Yes",
-            "water fountain": "Yes",
-            "canoe ramp": "Yes"
+            "bike racks": "No",
+            "water fountain": "No",
+            "canoe ramp": "Yes",
+            "bathroom":"Yes"
         }
     }
     
