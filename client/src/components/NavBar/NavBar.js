@@ -3,7 +3,7 @@ import "./NavBar.css";
 import { NavBarLeft } from "./NavBarLeft";
 import { NavBarRight } from "./NavBarRight";
 
-export class NavBar extends Component {
+class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
@@ -13,3 +13,5 @@ export class NavBar extends Component {
     );
   }
 }
+
+export default NavBar
