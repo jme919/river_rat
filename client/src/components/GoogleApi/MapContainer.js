@@ -10,7 +10,7 @@ export default class MapContainer extends Component {
   state = {
     locations: [
       { name: "Ancarrow's Landing", location: { lat: 37.508304, lng: -77.427166 } },
-      { name: "42nd Street Parking", location: { lat: 37.524682, lng: -77.476679 } },
+      { name: "Texas Beach", location: { lat: 37.529129, lng: -77.469729 } },
       { name: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
       { name: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
       { name: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
