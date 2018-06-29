@@ -11,3 +11,15 @@ app.post("/submit", function (req, res) {
             res.json(err);
         });
 });
+
+app.post("/comment", function (req, res){
+
+    Comments.create(req.body)
+        .then(function(dbComments){
+            res.json(dbComments);
+
+        })
+        .catch(function(err){
+            res.json(err);
+        });
+});

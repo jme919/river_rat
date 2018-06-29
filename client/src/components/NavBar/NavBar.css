@@ -1,11 +1,12 @@
 .NavBar {
-  background: rgb(72, 72, 97);
   height: 10vh;
   display:flex;
   align-items:center;
   justify-content: space-between;
   color: black;
   font-size: 25px;
+  background-color: rgba(250, 235, 215, 0.7);
+
 }
 
 .NavBar li {
