@@ -6,14 +6,17 @@ import { LoginForm } from "./components/LoginForm";
 import { GoogleApiWrapper } from "google-maps-react";
 // import child component
 import MapContainer from "./components/GoogleApi/MapContainer";
-
+import parks from "./parks.json";
 // IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
 class App extends Component {
+  state = {
+    parkArr: parks,
+  }
   render() {
     return (
       <div className="App">
         <NavBar />
-        <h1> Parks </h1>
+        <h1> Parks</h1>
         <MapContainer google={this.props.google} />
       </div>
     );
