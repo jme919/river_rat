@@ -29,3 +29,23 @@ class App extends Component {
 export default GoogleApiWrapper({
   apiKey: "your-api-key",
 })(App);
+
+
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+// import Detail from "./pages/Detail";
+// import NoMatch from "./pages/NoMatch";
+// import Nav from "./components/Nav";
+
+const App = () => (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </div>
+  </Router>
+);
+
+export default App;
