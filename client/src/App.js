@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
-import { LoginForm } from "./components/LoginForm";
+// import { LoginForm } from "./components/LoginForm";
+// import { SignUpForm } from "./components/SignUpForm";
+
 // import Google Maps API Wrapper from google-maps-react
 import { GoogleApiWrapper } from "google-maps-react";
+
 // import child component
 import MapContainer from "./components/GoogleApi/MapContainer";
 import parks from "./parks.json";
