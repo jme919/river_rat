@@ -6,6 +6,7 @@ const LevelBox = props => (
         <p className = "level-title">River Level</p>
         <p>{props.level}</p>
     </div>
+
 )
 
 export default LevelBox
