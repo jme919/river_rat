@@ -41,7 +41,7 @@ class HomePage extends Component {
       loadRiverStats = () => {
         API.getData()
           .then(res =>
-            this.setState({ level: res.data, temp: "", clarity: "", speed: "" })
+            this.setState({ level: res.data, temp: res.data, clarity: res.data, speed: res.data })
           )
           .catch(err => console.log(err));
       };
