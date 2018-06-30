@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 //import <insert component here> from "../components/<insert component folder here"
 import API from "../../utils/API"
-import Temp from "../../components/Level"
 import NavBar from "../../components/NavBar"
+import Level from "../../components/Level"
+import Temp from "../../components/Temp"
+import Clarity from "../../components/Clarity"
+import Speed from "../../components/Speed"
+import "./HomePage.css"
+
 
 
 // import React, { Component } from "react";
@@ -18,24 +23,37 @@ class HomePage extends Component {
         speed: ""
     }
 
-    componentDidMount() {
-        this.getRiverData
-    }
+    // componentDidMount() {
+    //     this.getRiverData
+    // }
 
-    getRiverData(){
+    // getRiverData(){
+    //     API.getData()
+    //         .then(res =>
+    //             this.setState
+    //         )
+    // }
+
+    componentDidMount() {
+        this.loadRiverStats();
+      }
+    
+      loadRiverStats = () => {
         API.getData()
-            .then(res =>
-                this.setState
-            )
-    }
+          .then(res =>
+            this.setState({ level: res.data, temp: "", clarity: "", speed: "" })
+          )
+          .catch(err => console.log(err));
+      };
     render(){
         return (
-            <NavBar />
-            // <Temp/>   
+            <div>
+                <NavBar />
+                <Level level={this.level} />
+            </div>
         )
     }
 }
 
 export default HomePage;
-
 
