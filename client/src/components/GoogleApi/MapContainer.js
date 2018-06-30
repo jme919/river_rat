@@ -1,69 +1,84 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom';
+import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
+import { Redirect } from 'react-router-dom';
 
 
-export default class MapContainer extends Component {
+class MapContainer extends Component {
 
   // ======================
   // ADD LOCATIONS TO STATE
   // ======================
   state = {
     locations: [
-      { name: "Ancarrow's Landing", location: { lat: 37.508304, lng: -77.427166 } },
-      { name: "Texas Beach", location: { lat: 37.529129, lng: -77.469729 } },
-      { name: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
-      { name: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
-      { name: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", location: { lat: 37.532384, lng: -77.445052 } },
-      { name: "Manchester Climbing Wall", location: { lat: 37.527711, lng: -77.444877 } },
-      { name: "Pipeline", location: { lat: 37.532534, lng: -77.434311 } },
-      { name: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
-    ]
+      { _id: 8, name: "Ancarrow's Landing", location: { lat: 37.508304, lng: -77.427166 } },
+      { _id: 7, name: "North Bank Park (Texas Beach)", location: { lat: 37.529129, lng: -77.469729 } },
+      { _id: 6, name: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
+      { _id: 1, name: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
+      { _id: 4, name: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", location: { lat: 37.532384, lng: -77.445052 } },
+      { _id: 3, name: "Manchester Climbing Wall", location: { lat: 37.527711, lng: -77.444877 } },
+      { _id: 2, name: "Pipeline", location: { lat: 37.532534, lng: -77.434311 } },
+      { _id: 5, name: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
+    ],
+    redirectTo: null,
   }
 
-  componentDidUpdate() {
-    this.loadMap(); // call loadMap function to load the google map
-  }
+  // loadMap() {
+  //   if (this.props && this.props.google) { // checks to make sure that props have been passed
+  //     const { google } = this.props; // sets props equal to google
+  //     const maps = google.maps; // sets maps to google maps props
 
-  loadMap() {
-    if (this.props && this.props.google) { // checks to make sure that props have been passed
-      const { google } = this.props; // sets props equal to google
-      const maps = google.maps; // sets maps to google maps props
+  //     const mapRef = this.refs.map; // looks for HTML div ref 'map'. Returned in render below.
+  //     const node = ReactDOM.findDOMNode(mapRef); // finds the 'map' div in the React DOM, names it node
 
-      const mapRef = this.refs.map; // looks for HTML div ref 'map'. Returned in render below.
-      const node = ReactDOM.findDOMNode(mapRef); // finds the 'map' div in the React DOM, names it node
+  //     const mapConfig = Object.assign({}, {
+  //       center: { lat: 37.547256, lng: -77.509147 }, // sets center of google map to the James River.
+  //       zoom: 11, // sets zoom. Lower numbers are zoomed further out.
+  //       mapTypeId: 'roadmap' // optional main map layer. Terrain, satellite, hybrid or roadmap--if unspecified, defaults to roadmap.
+  //     })
 
-      const mapConfig = Object.assign({}, {
-        center: { lat: 37.547256, lng: -77.509147 }, // sets center of google map to the James River.
-        zoom: 11, // sets zoom. Lower numbers are zoomed further out.
-        mapTypeId: 'roadmap' // optional main map layer. Terrain, satellite, hybrid or roadmap--if unspecified, defaults to roadmap.
-      })
+  //     this.map = new maps.Map(node, mapConfig); // creates a new Google map on the specified node (ref='map') with the specified configuration set above.
 
-      this.map = new maps.Map(node, mapConfig); // creates a new Google map on the specified node (ref='map') with the specified configuration set above.
+  //     // ==================
+  //     // ADD MARKERS TO MAP
+  //     // ==================
+  //     this.state.locations.forEach(location => { // iterate through locations saved in state
+  //       const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
+  //         position: { lat: location.location.lat, lng: location.location.lng }, // sets position of marker to specified location
+  //         map: this.map, // sets markers to appear on the map we just created on line 35
+  //         title: location.name // the title of the marker is set to the name of the location
+  //       });
+  //     })
 
-      // ==================
-      // ADD MARKERS TO MAP
-      // ==================
-      this.state.locations.forEach(location => { // iterate through locations saved in state
-        const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
-          position: { lat: location.location.lat, lng: location.location.lng }, // sets position of marker to specified location
-          map: this.map, // sets markers to appear on the map we just created on line 35
-          title: location.name // the title of the marker is set to the name of the location
-        });
-      })
+  //   }
+  // }
 
-    }
+  onMarkerClick(marker, loc) {
+    console.log('Marker clicked: %O %O', marker, loc);
+    this.setState({ redirectTo: `/parks/${loc._id}` });
   }
 
   render() {
-    const style = { // MUST specify dimensions of the Google map or it will not work. Also works best when style is specified inside the render function and created as an object
-      width: '90vw', // 90vw basically means take up 90% of the width screen. px also works.
-      height: '75vh' // 75vh similarly will take up roughly 75% of the height of the screen. px also works.
+    if (this.state.redirectTo) {
+      return <Redirect to={this.state.redirectTo} />;
     }
 
-    return ( // in our return function you must return a div with ref='map' and style.
-      <div ref="map" style={style}>
-        loading map...
-      </div>
-    )
+    const mapCenter = { lat: 37.547256, lng: -77.50914 };
+    return (
+      <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={11}>
+        {this.state.locations.map((loc) => (
+          <Marker key={loc._id} name={loc.name} position={loc.location} onClick={(marker) => this.onMarkerClick(marker, loc)} /> 
+        ))}
+      </Map>
+    );
   }
 }
+
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
+  LoadingContainer: (props) => (
+    <div style={{ width: '90vw', height: '75vh' }}>
+      loading map...
+    </div>
+  ),
+})(MapContainer);
