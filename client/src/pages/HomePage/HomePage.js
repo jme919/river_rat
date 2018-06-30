@@ -45,7 +45,7 @@ class HomePage extends Component {
     render(){
         return (
             <div>
-                <Level level={this.level} />
+                <LevelBox level={this.level} />
             </div>
         )
     }
