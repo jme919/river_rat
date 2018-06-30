@@ -13,6 +13,9 @@ export default class MapContainer extends Component {
       { name: "Texas Beach", location: { lat: 37.529129, lng: -77.469729 } },
       { name: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
       { name: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
+      { name: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", location: { lat: 37.532384, lng: -77.445052 } },
+      { name: "Manchester Climbing Wall", location: { lat: 37.527711, lng: -77.444877 } },
+      { name: "Pipeline", location: { lat: 37.532534, lng: -77.434311 } },
       { name: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
     ]
   }
