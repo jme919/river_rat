@@ -8,9 +8,6 @@ import Clarity from "../../components/Clarity"
 import Speed from "../../components/Speed"
 import "./HomePage.css"
 
-
-
-// import React, { Component } from "react";
 // import SearchForm from "./SearchForm";
 // import ResultList from "./ResultList";
 // import API from "../utils/API";
@@ -48,7 +45,6 @@ class HomePage extends Component {
     render(){
         return (
             <div>
-                <NavBar />
                 <Level level={this.level} />
             </div>
         )
