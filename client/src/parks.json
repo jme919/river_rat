@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Pony Pasture",
-        "image": "",
+        "image": "./images/pony.jpg",
         "description": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists. 7200 Riverside Dr.; parking for 150 cars",
         "location": "",
         "ammenities":{

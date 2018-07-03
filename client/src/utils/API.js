@@ -5,8 +5,14 @@ import axios from "axios";
 export default {
   getData: function(query) {
     return axios.get("/api/data", { params: { q: query } });
+  },
+
+  getPark: function(){
+    return axios.get("/api/park/:id")
   }
 };
+
+
 
 // export default {
 //   getMaps: function(query) {

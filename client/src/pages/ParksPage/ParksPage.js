@@ -6,9 +6,7 @@ import "./ParksPage.css";
 // IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
 
 class ParksPage extends Component {
-  // state = {
-  //   parkArr: parks,
-  // }
+ 
   render() {
     return (
       <div>
