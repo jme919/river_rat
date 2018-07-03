@@ -6,7 +6,7 @@ import { NavBarRight } from "./NavBarRight";
 class NavBar extends Component {
   render() {
     return (
-      <div className="NavBar">
+      <div className="NavBar is-success">
         <NavBarLeft/>
         <NavBarRight/>
       </div>

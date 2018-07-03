@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
-// import { LoginForm } from "./components/LoginForm";
-// import { SignUpForm } from "./components/SignUpForm";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+
 // import Detail from "./pages/Detail";
 // import NoMatch from "./pages/NoMatch";
 
@@ -15,13 +16,13 @@ const App = () => (
   <div className="App">
     <NavBar />
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/parkspage" component={ParksPage} />
-          <Route exact path="/parks/:id" component={ParkPage} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/parkspage" component={ParksPage} />
+        <Route exact path="/parks/:id" component={ParkPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/signup" component={SignupPage} />
+      </Switch>
     </Router>
   </div>
 );

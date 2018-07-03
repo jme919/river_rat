@@ -1,0 +1,27 @@
+/* .MapCenter{
+  position: absolute;
+  height: 75vh;
+  width: 50vw;
+} */
+
+
+/* element.style {
+    position: absolute;
+    width: 50vw;
+    height: 75vh;
+} */
+
+.mapWrapper{
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  width: 100%;
+}
+
+.mapWrapper > div:first-child { 
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
