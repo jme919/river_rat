@@ -12,7 +12,6 @@ class ParksPage extends Component {
   render() {
     return (
       <div>
-        {/* <h1>Parks</h1> */}
         <div className="mapWrapper">
         <MapContainer />
         </div>
