@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
+import Footer from "./components/Footer";
 // import { LoginForm } from "./components/LoginForm";
 // import { SignUpForm } from "./components/SignUpForm";
 // import Detail from "./pages/Detail";
@@ -23,6 +24,7 @@ const App = () => (
         </Switch>
       </div>
     </Router>
+    <Footer/>
   </div>
 );
 
