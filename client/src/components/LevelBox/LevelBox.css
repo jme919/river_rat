@@ -1,7 +1,9 @@
 .level-databox {
     position: absolute;
-    top: 1200px;
+    top: 800px;
     background-color: aquamarine;
-    width: 100%;
+    width: 20%;
+    left: 4%;
     text-align: center;
+    height: 100px;
 }
