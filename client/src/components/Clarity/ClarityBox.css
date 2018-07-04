@@ -1,0 +1,9 @@
+.clarity-databox {
+    position: absolute;
+    top: 800px;
+    background-color: aquamarine;
+    width: 20%;
+    left: 52%;
+    text-align: center;
+    height: 100px;
+}

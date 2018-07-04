@@ -1,7 +1,7 @@
 import React from "react";
 import "./LevelBox.css";
 
-const LevelBox = props => <p className = "level-databox">It works!{props.level}</p>
+const LevelBox = props => <p className = "level-databox">{props.level}</p>
 
 
 export default LevelBox

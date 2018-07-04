@@ -24,6 +24,7 @@ const App = () => (
         <Route exact path="/signup" component={SignupPage} />
       </Switch>
     </Router>
+    <Footer/>
   </div>
 );
 

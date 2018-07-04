@@ -3,10 +3,12 @@ import React, { Component } from "react";
 import API from "../../utils/API"
 import NavBar from "../../components/NavBar"
 import LevelBox from "../../components/LevelBox"
-import Temp from "../../components/Temp"
-import Clarity from "../../components/Clarity"
-import Speed from "../../components/Speed"
+import TempBox from "../../components/Temp/TempBox"
+import ClarityBox from "../../components/Clarity/ClarityBox"
+import SpeedBox from "../../components/Speed/SpeedBox"
+import Footer from "../../components/Footer/Footer"
 import "./HomePage.css"
+
 
 
 // import SearchForm from "./SearchForm";
@@ -34,37 +36,48 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.loadRiverStats();
-      }
-    
-      loadRiverStats = () => {
+    }
+
+    loadRiverStats = () => {
         API.getData()
-          .then(res =>
+            .then(res =>
             // this.setState({ level: res.data, temp: res.data, clarity: res.data, speed: res.data })
             // console.log(res.data.value.timeSeries[2])
             //res.data.value.timeSeries[0].values[0].value[13].value
 
-            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[12].value});
-            console.log(this.state.level)}
-            // console.log(res.data.value.timeSeries[2].values[0].value[12].value)
-                // temp: res.data.value.timeSeries[3].values[0].value[13].value,
-                // clarity: res.data.value.timeSeries[0].values[0].value[13].value,
-                // speed: res.data.value.timeSeries[1].values[0].value[13].value
-            // this.setState({
-            //     level: res.data.value.timeSeries[2].values[0].value[13].value,
-            //     temp: res.data.value.timeSeries[3].values[0].value[13].value,
-            //     clarity: res.data.value.timeSeries[0].values[0].value[13].value,
-            //     speed: res.data.value.timeSeries[1].values[0].value[13].value
-            // })
+            // {this.setState ({level: "level"});
+            // this.setState ({temp: "temp"});
+            // this.setState ({clarity: "clarity"});
+            // this.setState({speed: "speed"});
+            // console.log(res.data.value.timeSeries[0].values[0].value[12].value)}
+
+            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[11].value});
+            this.setState ({temp: res.data.value.timeSeries[0].values[0].value[11].value});
+            this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[11].value});
+            this.setState({speed: res.data.value.timeSeries[1].values[0].value[11].value});
+            console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[11].value)}
           )
           .catch(err => console.log(err));
       };
     render(){
         return (
-            <div className="home-image">
-                <LevelBox
-                    level={this.state.level}
-                />
-            </div>
+            <div>
+                <div className="home-image"></div>
+                <div className="home-data columns">
+                    <div className="column">
+                        <LevelBox level={this.state.level}/>
+                    </div>    
+                    <div className="column">
+                        <TempBox temp={this.state.temp}/>
+                    </div>
+                    <div className="column">
+                        <ClarityBox clarity={this.state.clarity}/>
+                    </div>
+                    <div className="column">
+                        <SpeedBox speed={this.state.speed}/>
+                    </div>
+                </div>  
+            </div>        
         )
     }
 }
