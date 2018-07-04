@@ -3,7 +3,7 @@ import "./ParkWrap.css";
 
 const ParkWrap = props =>(
     <section>
-        <div className="container is-fluid ">
+        <div id="parkWrap" className="container is-fluid ">
             <div className="columns is-centered ">
                 <div className="column is-half ">
                 {props.children}
