@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
 import { Redirect } from 'react-router-dom';
+import './index.css';
 
 
 class MapContainer extends Component {
@@ -11,14 +11,14 @@ class MapContainer extends Component {
   // ======================
   state = {
     locations: [
-      { _id: 8, name: "Ancarrow's Landing", location: { lat: 37.508304, lng: -77.427166 } },
-      { _id: 7, name: "North Bank Park (Texas Beach)", location: { lat: 37.529129, lng: -77.469729 } },
-      { _id: 6, name: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
-      { _id: 1, name: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
-      { _id: 4, name: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", location: { lat: 37.532384, lng: -77.445052 } },
-      { _id: 3, name: "Manchester Climbing Wall", location: { lat: 37.527711, lng: -77.444877 } },
-      { _id: 2, name: "Pipeline", location: { lat: 37.532534, lng: -77.434311 } },
-      { _id: 5, name: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
+      { _id: 8, name: "Ancarrow's Landing", title: "Ancarrow's Landing", location: { lat: 37.508304, lng: -77.427166 } },
+      { _id: 7, name: "North Bank Park (Texas Beach)", title: "North Bank Park (Texas Beach)", location: { lat: 37.529129, lng: -77.469729 } },
+      { _id: 6, name: "The Wetlands", title: "The Wetlands", location: { lat: 37.547256, lng: -77.509147 } },
+      { _id: 1, name: "Pony Pasture", title: "Pony Pasture", location: { lat: 37.5550862, lng: -77.520472 } },
+      { _id: 4, name: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", title: "T. Tyler Potterfield Memorial Bridge (T. Pott.)", location: { lat: 37.532384, lng: -77.445052 } },
+      { _id: 3, name: "Manchester Climbing Wall", title: "Manchester Climbing Wall", location: { lat: 37.527711, lng: -77.444877 } },
+      { _id: 2, name: "Pipeline", title: "Pipeline", location: { lat: 37.532534, lng: -77.434311 } },
+      { _id: 5, name: "Huguenot Flatwater", title: "Huguenot Flatwater", location: { lat: 37.559374, lng: -77.543602 } }
     ],
     redirectTo: null,
   }
@@ -64,10 +64,11 @@ class MapContainer extends Component {
     }
 
     const mapCenter = { lat: 37.547256, lng: -77.50914 };
+    
     return (
       <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={11}>
         {this.state.locations.map((loc) => (
-          <Marker key={loc._id} name={loc.name} position={loc.location} onClick={(marker) => this.onMarkerClick(marker, loc)} /> 
+          <Marker key={loc._id} name={loc.name} title={loc.title} position={loc.location} onClick={(marker) => this.onMarkerClick(marker, loc)} />
         ))}
       </Map>
     );
@@ -77,7 +78,7 @@ class MapContainer extends Component {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
   LoadingContainer: (props) => (
-    <div style={{ width: '90vw', height: '75vh' }}>
+    <div style={{ width: '500px', height: '500px' }}>
       loading map...
     </div>
   ),

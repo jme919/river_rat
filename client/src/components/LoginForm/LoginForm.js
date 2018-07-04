@@ -48,8 +48,7 @@ class Form extends Component {
           onChange={this.handleInputChange}
         />
         <button onClick={this.handleFormSubmit}>Submit</button>
-        <button onClick={this.handleCancel}
-        >Cancel</button>
+        <button onClick={this.handleCancel}>Cancel</button>
       </form>
     );
   }

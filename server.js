@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
+const authRoutes = require("./routes/api/routes");
 const mongoose = require("mongoose");
 
 
@@ -22,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 // Use apiRoutes
 app.use("/api", apiRoutes);
-
+app.use("/auth", authRoutes);
 
 
 // Send every other request to the React app

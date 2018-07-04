@@ -18,4 +18,11 @@ router.get("/parks", (req, res) => {
     .then((results) => console.log(results.data))
 })
 
+router.get("api/park/:id", (req, res)=>{
+  const object = {
+    park: req.params.id
+  }
+  res.json(object)
+})
+
 module.exports = router;

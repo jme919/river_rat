@@ -35,32 +35,32 @@ class Form extends Component {
         <p>Username: {this.state.username}</p>
         <p>Email: {this.state.email}</p>
         <p>Password: {this.state.password}</p>
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={this.state.username}
-          onChange={this.handleInputChange}
-        />
-        <input
-          type="eamil"
-          placeholder="Email"
-          name="email"
-          value={this.state.email}
-          onChange={this.handleInputChange}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          value={this.state.password}
-          onChange={this.handleInputChange}
-        />
-        <button onClick={this.handleFormSubmit}>Submit</button>
-        <button onClick={this.handleCancel}>Cancel</button>
+              <input
+                type="text"
+                placeholder="Username"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleInputChange}
+              />
+              <input
+                type="eamil"
+                placeholder="Email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleInputChange}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleInputChange}
+              />
+              <button onClick={this.handleFormSubmit}>Submit</button>
+              <button onClick={this.handleCancel}>Cancel</button>
       </form>
-    );
-  }
-}
-
+            );
+          }
+        }
+        
 export default Form;

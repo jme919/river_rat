@@ -1,16 +1,23 @@
 .NavBar {
   height: 10vh;
   display:flex;
+  padding: 0 2%;
   align-items:center;
+  font-size: 25px;
   justify-content: space-between;
   color: black;
-  font-size: 25px;
+  text-decoration: none;
   background-color: rgba(250, 235, 215, 0.7);
+  font-family: 'Neuton', serif;
 
 }
 
 .NavBar li {
   display: inline;
+}
+
+.NavBar a {
+  color: black;
 }
 
 
