@@ -34,31 +34,33 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.loadRiverStats();
-      }
-    
-      loadRiverStats = () => {
+    }
+
+    loadRiverStats = () => {
         API.getData()
-          .then(res =>
+            .then(res =>
             // this.setState({ level: res.data, temp: res.data, clarity: res.data, speed: res.data })
             // console.log(res.data.value.timeSeries[2])
             //res.data.value.timeSeries[0].values[0].value[13].value
 
-            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[12].value});
-            console.log(this.state.level)}
-            // console.log(res.data.value.timeSeries[2].values[0].value[12].value)
+            {
+                this.setState({ level: res.data.value.timeSeries[2].values[0].value[12].value });
+                console.log(this.state.level)
+            }
+                // console.log(res.data.value.timeSeries[2].values[0].value[12].value)
                 // temp: res.data.value.timeSeries[3].values[0].value[13].value,
                 // clarity: res.data.value.timeSeries[0].values[0].value[13].value,
                 // speed: res.data.value.timeSeries[1].values[0].value[13].value
-            // this.setState({
-            //     level: res.data.value.timeSeries[2].values[0].value[13].value,
-            //     temp: res.data.value.timeSeries[3].values[0].value[13].value,
-            //     clarity: res.data.value.timeSeries[0].values[0].value[13].value,
-            //     speed: res.data.value.timeSeries[1].values[0].value[13].value
-            // })
-          )
-          .catch(err => console.log(err));
-      };
-    render(){
+                // this.setState({
+                //     level: res.data.value.timeSeries[2].values[0].value[13].value,
+                //     temp: res.data.value.timeSeries[3].values[0].value[13].value,
+                //     clarity: res.data.value.timeSeries[0].values[0].value[13].value,
+                //     speed: res.data.value.timeSeries[1].values[0].value[13].value
+                // })
+            )
+            .catch(err => console.log(err));
+    };
+    render() {
         return (
             <div className="home-image">
                 <LevelBox
