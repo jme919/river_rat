@@ -6,8 +6,10 @@ export class NavBarLeft extends Component {
     return (
       <div className="NavBarLeft">
         <ul>
-          <li> Home | </li>
-          <li> Parks | </li>
+          <li> Home </li>
+          <li> | </li>
+          <li> Parks </li>
+          <li> | </li>
           <li> Outfitters </li>
         </ul>
       </div>
