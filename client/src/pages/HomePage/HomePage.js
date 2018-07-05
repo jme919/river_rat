@@ -36,11 +36,11 @@ class HomePage extends Component {
 
     componentDidMount() {
         this.loadRiverStats();
-      }
-    
-      loadRiverStats = () => {
+    }
+
+    loadRiverStats = () => {
         API.getData()
-          .then(res =>
+            .then(res =>
             // this.setState({ level: res.data, temp: res.data, clarity: res.data, speed: res.data })
             // console.log(res.data.value.timeSeries[2])
             //res.data.value.timeSeries[0].values[0].value[13].value
