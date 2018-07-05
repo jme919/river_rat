@@ -7,6 +7,7 @@ import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import Footer from "./components/Footer/Footer"
 
 // import Detail from "./pages/Detail";
 // import NoMatch from "./pages/NoMatch";

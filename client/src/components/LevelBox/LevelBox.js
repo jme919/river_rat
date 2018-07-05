@@ -1,15 +1,12 @@
 import React from "react";
 import "./LevelBox.css";
 
-const LevelBox = props => <p className = "level-databox">{props.level}</p>
-
+const LevelBox = props => (
+    <div className="level-databox">
+        <p className="level-heading">River Level</p>
+        <p className="level-data">{props.level}</p>
+        <p className="level-definition">Feet</p>
+    </div>
+)
 
 export default LevelBox
-
-// const LevelBox = props => (
-//     <div className = "river-databox">
-//         <p className = "level-title">River Level</p>
-//         <p>{props.level}</p>
-//     </div>
-
-// )
