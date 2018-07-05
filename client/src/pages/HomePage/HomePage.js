@@ -63,19 +63,11 @@ class HomePage extends Component {
         return (
             <div>
                 <div className="home-image"></div>
-                <div className="home-data columns">
-                    <div className="column">
-                        <LevelBox level={this.state.level}/>
-                    </div>    
-                    <div className="column">
-                        <TempBox temp={this.state.temp}/>
-                    </div>
-                    <div className="column">
-                        <ClarityBox clarity={this.state.clarity}/>
-                    </div>
-                    <div className="column">
-                        <SpeedBox speed={this.state.speed}/>
-                    </div>
+                <div className="home-data">
+                    <LevelBox level={this.state.level}/>
+                    <TempBox temp={this.state.temp}/>
+                    <ClarityBox clarity={this.state.clarity}/>
+                    <SpeedBox speed={this.state.speed}/>
                 </div>  
             </div>        
         )
@@ -84,3 +76,20 @@ class HomePage extends Component {
 
 export default HomePage;
 
+            // <div>
+            //     <div className="home-image"></div>
+            //     <div className="home-data columns">
+            //         <div className="column">
+            //             <LevelBox level={this.state.level}/>
+            //         </div>    
+            //         <div className="column">
+            //             <TempBox temp={this.state.temp}/>
+            //         </div>
+            //         <div className="column">
+            //             <ClarityBox clarity={this.state.clarity}/>
+            //         </div>
+            //         <div className="column">
+            //             <SpeedBox speed={this.state.speed}/>
+            //         </div>
+            //     </div>  
+            // </div>        
