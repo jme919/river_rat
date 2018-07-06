@@ -56,8 +56,8 @@ handleFormSubmit = () => {
               </p>
             </div>
             <div className="buttons is-centered">
-              <a className="button is-success is-outlined is-medium">Cancel</a>
-              <a onClick={this.handleFormLogin}className="button is-success is-outlined is-medium">Login</a>
+              <a className="button is-success is-medium">Cancel</a>
+              <a onClick={this.handleFormLogin}className="button is-success is-medium">Login</a>
             </div>
           </div>
         </div>
