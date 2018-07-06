@@ -9,9 +9,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
+import Outfitters from "./pages/Outfitters";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer"
 
 // import auth from "/routes/auth";
 // app.use('/api/auth', auth);
