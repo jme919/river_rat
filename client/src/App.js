@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
+import Outfitters from "./pages/Outfitters";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Footer from "./components/Footer/Footer"
@@ -23,6 +24,7 @@ const App = () => (
           <Route exact path="/" component={HomePage} />
           <Route exact path="/parkspage" component={ParksPage} />
           <Route exact path="/parks/:id" component={ParkPage} />
+          <Route exact path="/outfitters" component={Outfitters} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/signup" component={SignupPage} />
         </Switch>
