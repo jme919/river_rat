@@ -11,7 +11,7 @@ export class NavBarLeft extends Component {
             <li> | </li>
             <li><Link to="/parkspage"> Parks </Link></li>
             <li> | </li>
-            <li> Outfitters </li>
+            <li><Link to="/outfitters"> Outfitters </Link></li>
           </ul>
         </div>
     );
