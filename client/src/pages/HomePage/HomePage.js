@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 //import <insert component here> from "../components/<insert component folder here"
 import API from "../../utils/API"
-import NavBar from "../../components/NavBar"
 import LevelBox from "../../components/LevelBox"
 import TempBox from "../../components/Temp/TempBox"
 import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
-import Footer from "../../components/Footer/Footer"
 import "./HomePage.css"
 
 
