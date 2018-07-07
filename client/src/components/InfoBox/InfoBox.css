@@ -1,9 +1,23 @@
-#parkWrap{
+#infoBox{
     background-color: rgba(250, 235, 215, 0.7);
     text-align: center;
     margin-top: 200px;
     font-family: 'Neuton', serif;
-    font-size:75px;
+    font-size:25px;
     color:black;
     border-radius: 25px;
+    
+    
+
+    
+    
 }
+
+
+div.info{
+    margin-top:50px;
+    color: rgb(43, 180, 19);
+    font-size: 23px;
+    
+
+  }
