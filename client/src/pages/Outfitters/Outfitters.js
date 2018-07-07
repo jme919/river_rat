@@ -11,7 +11,7 @@ class Outfitters extends Component {
     render(){
         return(
             <div>This is the outfitters page</div>
-        )
+        );
     }
 }
 

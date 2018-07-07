@@ -7,12 +7,6 @@ import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
 import "./HomePage.css"
 
-
-
-// import SearchForm from "./SearchForm";
-// import ResultList from "./ResultList";
-// import API from "../utils/API";
-
 class HomePage extends Component {
     state = {
         level: "",
@@ -20,17 +14,6 @@ class HomePage extends Component {
         clarity: "",
         speed: ""
     }
-
-    // componentDidMount() {
-    //     this.getRiverData
-    // }
-
-    // getRiverData(){
-    //     API.getData()
-    //         .then(res =>
-    //             this.setState
-    //         )
-    // }
 
     componentDidMount() {
         this.loadRiverStats();
@@ -68,7 +51,7 @@ class HomePage extends Component {
                     <SpeedBox speed={this.state.speed}/>
                 </div>  
             </div>        
-        )
+        );``
     }
 }
 
