@@ -54,7 +54,7 @@ import Footer from "./components/Footer/Footer"
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/parkspage" component={ParksPage} />
-          <Route exact path="/parks/:id" component={ParkPage} />
+          <Route path="/parks/:id" component={ParkPage} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/signup" component={SignupPage} />
         </Switch>
