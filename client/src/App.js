@@ -49,8 +49,8 @@ import Footer from "./components/Footer/Footer"
 
   const App = () => (
     <div className="App">
-      <NavBar />
       <Router>
+        <NavBar />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/parkspage" component={ParksPage} />

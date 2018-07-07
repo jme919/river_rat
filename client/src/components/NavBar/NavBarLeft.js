@@ -17,5 +17,3 @@ export class NavBarLeft extends Component {
     );
   }
 }
-
-{/* <li><NavLink to="../../pages/HomePage"> Home </NavLink></li> */}
