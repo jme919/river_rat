@@ -8,13 +8,13 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 
 ReactDOM.render(
-  // <Router>
-  //   <div>
-  //     <Route exact path='/' component={App} />
-  //     <Route path="/login" component={Login} />
-  //     <Route path="/signup" component={Signup} />
-  //     </div>
-  // </Router>,
+  <Router>
+    <div>
+      <Route exact path='/' component={App} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
+      </div>
+  </Router>,
   <App />, 
   document.getElementById("root")
 );

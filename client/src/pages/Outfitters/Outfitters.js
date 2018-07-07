@@ -1,14 +1,16 @@
-import React, { Component } from "react-dom"
+import React, { Component } from "react";
+import "./Outfitters.css";
+// import axios from "axios";
 
 class Outfitters extends Component {
-    // state = {
-    //     level: "",
-    //     temp: "",
-    //     clarity: "",
-    //     speed: ""
-    // }
+    state = {
+        level: "",
+        temp: "",
+        clarity: "",
+        speed: ""
+    }
 
-    render(){
+    render() {
         return(
             <div>This is the outfitters page</div>
         )
