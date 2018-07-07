@@ -8,7 +8,7 @@ class Outfitters extends Component {
         speed: ""
     }
 
-    render(){
+    render() {
         return(
             <div>This is the outfitters page</div>
         )
