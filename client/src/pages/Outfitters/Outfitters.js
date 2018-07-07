@@ -1,12 +1,12 @@
-import React, { Component } from "react-dom"
+import React, { Component } from "react"
 
 class Outfitters extends Component {
-    // state = {
-    //     level: "",
-    //     temp: "",
-    //     clarity: "",
-    //     speed: ""
-    // }
+    state = {
+        level: "",
+        temp: "",
+        clarity: "",
+        speed: ""
+    }
 
     render(){
         return(
