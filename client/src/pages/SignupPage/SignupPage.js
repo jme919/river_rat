@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SignupPage.css";
 import axios from "axios";
+import API from "../../utils/API"
 
 class SignupPage extends Component {
   state = {
