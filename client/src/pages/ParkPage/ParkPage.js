@@ -11,7 +11,7 @@ class ParkPage extends Component {
   }
   componentDidMount = () => {
 
-    
+
     const { match: { params } } = this.props;
     const parkId = params.id;
     console.log("I am here too" + parkId);
@@ -26,54 +26,67 @@ class ParkPage extends Component {
           })
         }
       }
-      // const image = "background-image: url(" + this.state.park.image + ")";
+      // const image = this.state.park.image;
+      // console.log(image);
       // this.setState({image:image},()=>{
-        // console.log("what the fuck" + this.state.image)
-      // });
+      // console.log("some pic" + this.state.image);
       
+      // });
+
 
     });
-    
-
-
   };
 
+  changeImage = ()=>{
+    document.getElementById('pImage').style.backgroundImage = 'url(' + this.state.park.image + ')';
+  };
 
   render() {
-   
+    // const body = document.getElementsByTagName('body')[0];
+    //    
+// const imgUrl = this.state.park.image;
+// const divStyle = {
+//   backgroundImage:'url(' + imgUrl + ')'
+// }
+    // document.getElementById('pImage').style.backgroundImage = "url(" + this.state.park.image + ")";
     if (this.state.park) {
-
-
+     document.body.style.backgroundImage = 'url(' + this.state.park.image + ')';
+     document.body.style.backgroundRepeat = "no-repeat";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundSize = "cover";
+     document.body.style.margin = 0;
+     document.body.style.padding = 0;
+     document.body.style.height = 100;
+     document.body.style.minHeight = "100vh";
 
       return (
         <div>
-        <div className="parkImage"></div>
-        
+          <div id="pImage" className="parkImage"></div>
+          
           <ParkWrap>
-            
+
             <h5 className="is-bold">{this.state.park.name}</h5>
-            
+
           </ParkWrap>
 
           <InfoBox>
             <p>{this.state.park.word}</p>
             <div className="info">
-            <p>{this.state.park.ammenities.parking}</p>
-            <p>{this.state.park.ammenities.bathroom}</p>
-            <p>{this.state.park.ammenities.waterfountain}</p>
-            <p>{this.state.park.ammenities.bike}</p>
-            <p>{this.state.park.ammenities.canoeramp}</p>
+              <p>{this.state.park.ammenities.parking}</p>
+              <p>{this.state.park.ammenities.bathroom}</p>
+              <p>{this.state.park.ammenities.waterfountain}</p>
+              <p>{this.state.park.ammenities.bike}</p>
+              <p>{this.state.park.ammenities.canoeramp}</p>
             </div>
           </InfoBox>
         </div>
       );
+      
     } else {
       return (
         <h1>whoops!</h1>
       )
     }
-
-
   }
 }
 
