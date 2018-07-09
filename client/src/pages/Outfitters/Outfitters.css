@@ -1,0 +1,28 @@
+.outfitters-title{
+    font-family: 'Neuton', serif, bold;
+    color:black;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.outfitters-heading{
+    text-align: left;
+    font-family: 'Neuton', serif, bold;
+    color:black;
+    font-size: 30px;
+}
+
+.list-item{
+    text-align: left;
+    background-color: rgba(250, 235, 215, 0.7);
+    font-family: 'Neuton', serif;
+    color:black;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+.list-name{
+    font-size: 25px;
+}
