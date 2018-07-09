@@ -1,0 +1,118 @@
+[
+    {
+        "id": 1,
+        "name": "Pony Pasture",
+        "image": "/parkimages/pony2.jpeg",
+        "word": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists. 7200 Riverside Dr.; parking for 150 cars.",
+        "location": "",
+        "ammenities":{
+            "parking":"Parking: Yes",
+            "bike": "Bike Racks: Yes",
+            "waterfountain":"Water Fountain: Yes",
+            "canoeramp": "Canoe Ramp: Yes",
+            "bathroom": "Bathroom: Yes"
+
+        }
+    },
+    {
+        "id": 2,
+        "name": "Pipeline",
+        "image": "/parkimages/pipeline2.jpeg",
+        "word": "From the parking lot, you walk to a metal ladder then descend to the metal catwalk atop the pipeline, which offers views of the Pipeline Rapids. The pipeline carries storm water to a holding tank located beyond the Mayo Bridge. Please pay attention to water levels for safety’s sake. There is a bike rack and although the ladder at the eastern end of the catwalk is still an obstacle for some, there is a new wooden staircase. The closest place to put in is the ramp near the Belle Island parking lot",
+        "location": "End of South 12th St., 7 spaces for cars",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: Yes",
+            "waterfountain": "Water Fountain: No",
+            "canoeramp": "Canoe Ramp: No",
+            "bathroom": "Bathroom: NO"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Manchester Climbing Wall",
+        "image": "/parkimages/manchester.jpg",
+        "word": "This climbing area, under the Manchester Bridge in downtown Richmond, is a series of abandoned train trestles that have been equipped with bolts and shutts. Here climbers can hone their skills of leading, both trad and sport, rappelling, and self-rescue. There is a parking lot accessible from the streets off 7th St., take Semmes to the Floodwall parking lot, just before the entrance onto the Manchester Bridge going north and follow the path down near the railroad tracks.",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: No",
+            "bike": "Bike Racks: No",
+            "waterfountain": "Water Fountain: No",
+            "canoeramp": "Canoe Ramp: No",
+            "bathroom":"Bathroom: No"
+        }
+    },
+    {
+        "id": 4,
+        "name": "T. Tyler Potterfield Memorial Bridge",
+        "image": "/parkimages/tpott.jpeg",
+        "word": "The physical link between Brown’s Island and Manchester, this pedestrian and cycling pathway sits atop a former hydroelectric dam, some 20 feet above the river. The bridge provides unequaled river vistas, panoramic views of the downtown skyline, along with sounds that belie the extraordinarily close relationship of the bridge to the roaring river. The wheelchair accessible bridge is open to pedestrians and cyclists 24 hours a day. Access is provided from either side of the river: Brown’s Island on the north and from Semmes Ave. on the south side. Southside has 15 parking spaces in lot between Semmes Ave. and 7th Street, also parking along 7th street. Northside has parking in lot off Tredegar street; about 50 spaces.  ",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: Yes (Northside only)",
+            "waterfountain": "Water Fountain: Yes",
+            "canoeramp": "Canoe Ramp: No",
+            "bathroom":"Bathroom: Yes"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Huguenot Flatwater",
+        "image": "/parkimages/flat.jpeg",
+        "word": "Canoeing, kayaking, rafting, tubing, swimming, fishing, biking, hiking, running and exploring. The takeout has access to good, calm flat water at water levels below five feet. Try a fun paddle up the James to Bosher’s Dam from Huguenot Flatwater. It is also a great place to try a paddle downriver to Williams Island and paddle pack to Huguenot, hop out at Pony Pasture, or to continue to points beyond. There are many fishing holes and calm spots to anchor your boat to cast a line in this section of the James. When the water levels are low, many granite boulders can be accessed by walking or with a short swim. The trails of Huguenot Flatwater are well-shaded, well-marked and there are plenty of spots to stop and watch the James flow by. The parking lot has space for about 35 cars, and there is a second lot with about 10 spaces on Riverside Drive at Oxford Parkway. Parking: 8600 Riverside Dr, just west of the Huguenot Bridge; parking for 35 cars.",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: Yes",
+            "waterfountain": "Water Fountain: No",
+            "canoeramp": "Canoe Ramp: Yes",
+            "bathroom":"Bathroom: Yes"
+        }
+    },
+    
+    {
+        "id": 6,
+        "name": "The Wetlands",
+        "image": "/parkimages/wetlands2.jpeg",
+        "word": "One of the most popular swimming and sunbathing spots on the river. The main entrance is located off Riverside Drive two miles east of the Huguenot Bridge. This entrance has the largest parking lot in the JRPS, but still, on nice days it can be difficult to find a parking spot. Be prepared to wait in line or find an alternate method of travel to the park (bike, walk, carpool). Rated at class II, the rapids are part of the James River’s main channel. Steps lead directly into the river and are fully equipped with a canoe launch, also suitable for kayaks and rafts. There are miles of trails in the park and the main trails are gravel and are good for trail runners and cyclists.",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: Yes",
+            "waterfountain": " Water Fountain: Yes",
+            "canoeramp": "Canoe Ramp: Yes",
+            "bathroom":"Bathroom: No"
+        }
+    },
+    {
+        "id": 7,
+        "name": "North Bank Park (Texas Beach)",
+        "image": "",
+        "word": "The calm shallow waters and slower rapids make Texas Beach one of the safest water access points within the Park for wading and swimming. The area is great for snorkeling and there is plenty to explore: fish, turtles, shells, snails and unusual river-bottom features.Take the trail from the parking lot, cross the bridge over the train tracks, down the stairs then wander till you find a spot to your liking. Along with the newly completed wooden boardwalk over a wetland section of trail, you’ll find many isolated sandy beaches, sunbathing rocks and shady spots to enjoy.",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: Yes",
+            "waterfountain": "Water Fountain: Yes",
+            "canoeramp": " Canoe Ramp: No",
+            "bathroom":"Bathroom: Yes"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Ancarrow's Landing",
+        "image": "",
+        "word": "Ancarrow’s includes the beginning of the Richmond Slave Trail. This self-guided trail covers nearly three miles and travels west along the James River, crossing to the northside of the river. This park section is a prime spot for the running of the shad every spring. The trail loop is accessible from the east side of Ancarrow’s landing offers family-friendly riding for beginning mountain bikers. Parking: 200 Branders St., parking for 100 cars and trailers. To get there, take the Maury St. exit off I-95 and turn right, follow the road to the end of Brander St.",
+        "location": "",
+        "ammenities": {
+            "parking": "Parking: Yes",
+            "bike": "Bike Racks: No",
+            "waterfountain": "Water Fountain: No",
+            "canoeramp": "Conoe Ramp: Yes",
+            "bathroom":"Bathroom: Yes"
+        }
+    }
+    
+    
+]

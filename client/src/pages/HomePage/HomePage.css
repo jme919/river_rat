@@ -1,0 +1,21 @@
+.home-image {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("../../images/truss.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  .home-data {
+    margin-top: 0%;
+    height: 600px;
+  }
+
+  body {
+    height: 1200px;
+  }
