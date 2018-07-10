@@ -10,6 +10,7 @@ export default {
   getPark: function(){
     return axios.get("/api/park/:id")
   }
+  
 };
 
 

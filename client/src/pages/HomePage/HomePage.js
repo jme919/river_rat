@@ -6,6 +6,48 @@ import TempBox from "../../components/Temp/TempBox"
 import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
 import "./HomePage.css"
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax'
+import Plx from "react-plx"
+
+
+
+// window.onscroll = function () {testFunction()};
+
+// function testFunction() {
+//   console.log("it freaking works!")
+//   console.log(document.getElementById("data-box").scrollTop)
+// };
+
+const parallaxData = [
+    {
+        start: 100,
+        end: 600,
+        properties: [
+            {
+                startValue: 0,
+                endValue: 1,
+                property: "opacity"
+            },
+            {
+                startValue: "rgba(250, 235, 215, 0.7)",
+                endValue: "rgba(50,50,200,0.8)",
+                property: "backgroundColor"
+            }
+        ]
+    },
+    // {
+    //     start: 700,
+    //     end: 800,
+    //     properties: [
+    //         {
+    //             startValue: 0,
+    //             endValue: 5,
+    //             property: "translateY"
+    //         }
+    //     ]
+    // }    
+]
 
 class HomePage extends Component {
     state = {
@@ -22,15 +64,6 @@ class HomePage extends Component {
     loadRiverStats = () => {
         API.getData()
             .then(res =>
-            // this.setState({ level: res.data, temp: res.data, clarity: res.data, speed: res.data })
-            // console.log(res.data.value.timeSeries[2])
-            //res.data.value.timeSeries[0].values[0].value[13].value
-
-            // {this.setState ({level: "level"});
-            // this.setState ({temp: "temp"});
-            // this.setState ({clarity: "clarity"});
-            // this.setState({speed: "speed"});
-            // console.log(res.data.value.timeSeries[0].values[0].value[12].value)}
 
             {this.setState ({level: res.data.value.timeSeries[2].values[0].value[10].value});
             this.setState ({temp: res.data.value.timeSeries[0].values[0].value[10].value});
@@ -40,17 +73,26 @@ class HomePage extends Component {
           )
           .catch(err => console.log(err));
       };
+
+      
     render(){
         return (
-            <div>
-                <div className="home-image"></div>
-                <div className="home-data">
-                    <LevelBox level={this.state.level}/>
-                    <TempBox temp={this.state.temp}/>
-                    <ClarityBox clarity={this.state.clarity}/>
-                    <SpeedBox speed={this.state.speed}/>
-                </div>  
-            </div>        
+            <ParallaxProvider>
+                <div>
+                    <Parallax>    
+                        <div id="river-image" className="home-image parallax"></div>
+                    </Parallax> 
+                    <br />
+                    <div id="data-box" className="home-data">
+                        <Plx parallaxData={parallaxData}>
+                            <LevelBox level={this.state.level}/>
+                            <TempBox temp={this.state.temp}/>
+                            <ClarityBox clarity={this.state.clarity}/>
+                            <SpeedBox speed={this.state.speed}/>
+                        </Plx>
+                    </div>  
+                </div>
+            </ParallaxProvider>        
         );``
     }
 }
