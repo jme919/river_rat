@@ -4,12 +4,12 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
-const authRoutes = require("./routes/api/routes");
+const authRoutes = require("./routes/auth");
 const mongoose = require("mongoose");
 
 
 //Make sure that this is the correct thing to do here
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/river_rat");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/river_rat");
 
 
 // Define middleware here
@@ -35,3 +35,8 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
+
+mongoose.Promise = require("bluebird");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/river_rat", { promiseLibrary: require("bluebird") })
+  .then(() => console.log("connection successful"))
+  .catch((err) => console.error(err));

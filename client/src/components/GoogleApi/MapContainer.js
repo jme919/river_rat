@@ -33,10 +33,10 @@ class MapContainer extends Component {
       return <Redirect to={this.state.redirectTo} />;
     }
 
-    const mapCenter = { lat: 37.547256, lng: -77.50914 };
+    const mapCenter = { lat: 37.536578, lng: -77.478112 };
     
     return (
-      <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={11}>
+      <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={13}>
         {this.state.locations.map((loc) => (
           <Marker key={loc._id} name={loc.name} title={loc.title} position={loc.location} onClick={(marker) => this.onMarkerClick(marker, loc)} />
         ))}
