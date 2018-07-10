@@ -54,10 +54,11 @@ UserSchema.methods.comparePassword = function (passw, cb) {
 };
 
 const User = mongoose.model("User", UserSchema);
-
+console.log(User);
 module.exports = User;
 
 // Or this...
+
 // module.exports = mongoose.model("User", UserSchema);
 
 //<form action="/submit" method="post">
