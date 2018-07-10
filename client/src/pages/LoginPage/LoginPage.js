@@ -37,6 +37,16 @@ class LoginPage extends Component {
   }
 
   render() {
+
+    document.body.style.backgroundImage = 'url(/parkimages/river.jpeg)';
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    document.body.style.height = 100 + "%";
+    document.body.style.minHeight = 100 + "vh";
+
     const { username, password } = this.state;
     return (
       <form>
@@ -71,8 +81,8 @@ class LoginPage extends Component {
               </div>
             </div>
           </div>
-        </form>
-      </div>
+       </div>
+      </form> 
     );
   }
 }
