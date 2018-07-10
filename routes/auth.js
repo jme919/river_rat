@@ -9,17 +9,23 @@ const User = require("../models/user");
 
 
 router.post('/signup', function (req, res) {
-  console.log(User);
   if (!req.body.username || !req.body.password) {
     res.json({ success: false, msg: 'Please pass username and password.' });
   } else {
+
     const newUser = new User({
       username: req.body.username,
+      email: req.body.email,
       password: req.body.password
     });
+
     // save the user
+
     newUser.save(function (err) {
       if (err) {
+        //////////DEAL WITH ME BETTER////////////////////
+        console.log(err);
+        /////////////////////////
         return res.json({ success: false, msg: 'Username already exists.' });
       }
       res.json({ success: true, msg: 'Successful created new user.' });

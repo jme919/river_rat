@@ -5,7 +5,8 @@ import axios from "axios";
 class LoginPage extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    message: ""
   }
 
   handleInputChange = e => {
@@ -13,7 +14,7 @@ class LoginPage extends Component {
     this.setState({ [name]: value });
   }
 
-  handleFormSubmit = () => {
+  handleFormLogin = () => {
     const { username, password } = this.state;
     this.setState({
       username: "",
@@ -22,20 +23,30 @@ class LoginPage extends Component {
     const data = {
       username, password
     }
-    axios.post("/auth/login", data).then(res => {
-      console.log(res);
-    }).catch(err => {
-      console.log(err);
+    console.log(data);
+    axios.post("/auth/login", data).then((result) => {
+      localStorage.setItem('jwtToken', result.data.token);
+      this.setState({ message: '' });
+      this.props.history.push('/parkspage')
     })
+      .catch((error) => {
+        if (error.response.status === 401) {
+          this.setState({ message: 'Login failed. Username or password not match' });
+        }
+      });
   }
 
   render() {
     const { username, password } = this.state;
     return (
-      <form method="POST" action="/login">
+      <form>
         <div className="columns is-centered is-vcentered loginWrapper">
           <div className="column is-4">
             <h4> Login </h4>
+            {this.state.message.length
+              ? <div>{this.state.message}</div>
+              : null
+            }
             <div className="field">
               <div className="control has-icons-left has-icons-right">
                 <input onChange={this.handleInputChange} value={username} className="input is-rounded is-success" name="username" type="username" placeholder="User Name" />
