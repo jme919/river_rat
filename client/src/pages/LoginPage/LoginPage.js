@@ -57,22 +57,22 @@ class LoginPage extends Component {
                   <i className="fas fa-check"></i>
                 </span>
               </div>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input onChange={this.handleInputChange} value={password} className="input is-rounded is-success" name="password" type="password" placeholder="Password" />
-                <span className="icon is-medium is-left">
-                  <i className="fas fa-lock"></i>
-                </span>
-              </p>
-            </div>
-            <div className="buttons is-centered">
-              <a className="button is-success is-medium">Cancel</a>
-              <a onClick={this.handleFormLogin} className="button is-success is-medium">Login</a>
+              <div className="field">
+                <p className="control has-icons-left">
+                  <input onChange={this.handleInputChange} value={password} className="input is-rounded is-success" name="password" type="password" placeholder="Password" />
+                  <span className="icon is-medium is-left">
+                    <i className="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div className="buttons is-centered">
+                <a className="button is-success is-medium">Cancel</a>
+                <a onClick={this.handleFormLogin} className="button is-success is-medium">Login</a>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     );
   }
 }
