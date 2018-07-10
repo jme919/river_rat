@@ -26,6 +26,7 @@ class SignupPage extends Component {
       username, email, password
     }
     axios.post("/auth/signup", data).then(res => {
+      this.props.history.push('/parkspage')
       console.log(res);
     }).catch(err => {
       console.log(err);
