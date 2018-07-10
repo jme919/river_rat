@@ -4,7 +4,7 @@ import "./InfoBox.css";
 const InfoBox = props => (
     <section>
         <div id="infoBox" className="container is-fluid ">
-            <div className=" home-data columns is-centered ">
+            <div className=" home-data columns">
                 <div className="column">
                     {props.children}
                 </div>
