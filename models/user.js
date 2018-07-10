@@ -1,10 +1,8 @@
-// Require mongoose
-const mongoose = require("mongoose");
-// Get a reference to the mongoose Schema constructor
-const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt-nodejs");
-//construct a schema
-const UserSchema = new Schema({
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var bcrypt = require('bcrypt-nodejs');
+
+var UserSchema = new Schema({
     username: {
         type: String,
         trim: true,
@@ -29,20 +27,25 @@ const UserSchema = new Schema({
     }
 });
 
-UserSchema.pre("save", function (next) {
-    const user = this;
-    if (this.isModified("password") || this.isNew) {
+UserSchema.pre('save', function (next) {
+    var user = this;
+    if (this.isModified('password') || this.isNew) {
         bcrypt.genSalt(10, function (err, salt) {
             if (err) {
                 return next(err);
             }
-            user.password = hash;
-            next();
+            bcrypt.hash(user.password, salt, null, function (err, hash) {
+                if (err) {
+                    return next(err);
+                }
+                user.password = hash;
+                next();
+            });
         });
-
     } else {
         return next();
-    };
+    }
+});
 
 UserSchema.methods.comparePassword = function (passw, cb) {
     bcrypt.compare(passw, this.password, function (err, isMatch) {
@@ -53,17 +56,4 @@ UserSchema.methods.comparePassword = function (passw, cb) {
     });
 };
 
-const User = mongoose.model("User", UserSchema);
-
-module.exports = User;
-
-// Or this...
-// module.exports = mongoose.model("User", UserSchema);
-
-//<form action="/submit" method="post">
-//  <input type="text" name="username" placeholder="username">
-    //    <input type="password" name="password" placeholder="password">
-    //      <input type="text" name="email" placeholder="email">
-        //        <input type="submit">
-    // </form>
-})
+module.exports = mongoose.model('User', UserSchema);

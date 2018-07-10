@@ -25,7 +25,7 @@ class SignupPage extends Component {
     const data = {
       username, email, password
     }
-    axios.post("/auth/submit", data).then(res => {
+    axios.post("/auth/signup", data).then(res => {
       console.log(res);
     }).catch(err => {
       console.log(err);
