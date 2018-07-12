@@ -5,6 +5,9 @@ const Schema = mongoose.Schema;
 
 // Create the commentsSchema with the schema object
 const  commentsSchema = new Schema({
+    //This is the username who posted the comment
+    username: String,
+    
     // The park that is associated with the comment
     parkId: {
         type: Number,
@@ -20,7 +23,7 @@ const  commentsSchema = new Schema({
         default: Date.now
     },
     // text of the comment
-    commentText: String
+    comment: String
 });
 
 // Create the comments model using the commentsSchema
