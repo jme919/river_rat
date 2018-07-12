@@ -2,6 +2,7 @@ const axios = require("axios");
 const router = require("express").Router();
 const passport = require('passport');
 require('../config/passport')(passport);
+const db = require("../models");
 
 router.get("/data", (req, res) => {
   axios
@@ -27,6 +28,15 @@ router.get("api/park/:id", (req, res)=>{
   res.json(object)
 })
 
+router.get("/api/comments/:id", (req, res) =>{
+  const parkId = req.params.id;
+  db.Comments.find({"parkId":parkId})
+  .then(result=>{
+    console.log("!!!! Here it is",result);
+    res.json(result);
+  })
+  .catch(err=>res.status(500).json(err));
+})
 // router.post('/', passport.authenticate('jwt', { session: false }), function (req, res) {
 //   const token = getToken(req.headers);
 //   if (token) {

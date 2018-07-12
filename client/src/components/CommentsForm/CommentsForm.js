@@ -1,5 +1,5 @@
 import React from "react";
-import "./Comments.css";
+import "./CommentsForm.css";
 
 const Comments = props => (
     <section>
