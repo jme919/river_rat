@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./Comments.css";
+import "./CommentsForm.css";
 import axios from "axios"
 
 class Comments extends Component{

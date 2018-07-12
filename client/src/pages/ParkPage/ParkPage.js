@@ -3,7 +3,7 @@ import parks from "../../parks.json";
 import ParkWrap from "./../../components/ParkWrap";
 import API from "./../../utils/API";
 import InfoBox from "./../../components/InfoBox";
-import Comments from "./../../components/Comments";
+import Comments from "./../../components/CommentsForm";
 class ParkPage extends Component {
   state = {
     parkArr: parks,
