@@ -2,6 +2,9 @@ const axios = require("axios");
 const router = require("express").Router();
 const passport = require('passport');
 require('../config/passport')(passport);
+const Comment = require("../models/comments");
+const express = require("express")
+// const db = require("../models")
 
 router.get("/data", (req, res) => {
   axios
@@ -26,6 +29,38 @@ router.get("api/park/:id", (req, res)=>{
   }
   res.json(object)
 })
+
+//this doesn't seem to be working
+router.post("/parkpage", (req, res) => {
+  const newComment = new Comment({
+    username: req.body.username,
+    parkID: req.body.parkID,
+    comment: req.body.comment
+  });
+
+  newComment.save(function (err){
+    if (err) {
+      console.log(err);
+      res.status(500);
+      return
+    }
+    res.json({status: "okay"})
+  })
+})
+
+// router.post("/parkpage", (req, res) => {
+//   create: function(req, res) {
+//     const article = {
+//       username: req.body.username,
+//       parkID: req.body.headline.main,
+//       url: req.body.web_url
+//     };
+//     db.Article
+//       .create(article)
+//       .then(dbArticle => res.json(dbArticle))
+//       .catch(err => res.status(422).json(err));
+//   }
+// }  
 
 // router.post('/', passport.authenticate('jwt', { session: false }), function (req, res) {
 //   const token = getToken(req.headers);

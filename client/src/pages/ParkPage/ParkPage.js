@@ -93,7 +93,9 @@ class ParkPage extends Component {
             </div>
 
           </InfoBox>
-          <Comments />
+          <Comments 
+            parkID={this.state.parkID}
+          />
 
         </div>
       );
