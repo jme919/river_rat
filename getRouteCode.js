@@ -1,7 +1,7 @@
 
 //for comments.js component?
 import API from "../../utils/API";
-class Books extends Component {
+class CommentsBox extends Component {
   state = {
     comments: []
   }; 

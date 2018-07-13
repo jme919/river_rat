@@ -22,7 +22,7 @@ class ParkPage extends Component {
 
     API.getComments(parkId).then(res=>{
       console.log(res);
-      // this.setState({comments:res});
+      // this.setState({comments:res.data});
     }).catch(err => 
       console.log(err));
 
