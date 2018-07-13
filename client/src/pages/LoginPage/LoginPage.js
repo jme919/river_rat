@@ -81,8 +81,8 @@ class LoginPage extends Component {
               </div>
             </div>
           </div>
-       </div>
-      </form> 
+        </div>
+      </form>
     );
   }
 }
