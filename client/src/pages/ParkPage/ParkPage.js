@@ -101,9 +101,10 @@ class ParkPage extends Component {
             </div>
 
           </InfoBox>
-          <CommentsForm 
-            parkID={this.state.parkID}
-          />
+
+          
+          
+          <CommentsForm />
           <CommentsBox>
             <ul>
               {/* {this.state.comment.map((commentInfo) =>
