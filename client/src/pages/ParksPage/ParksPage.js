@@ -7,7 +7,7 @@ import Table from "../../components/Table/Table";
 // IMPORTANT: Passing the Google Maps props down to the MapContainer component as "google".
 
 class ParksPage extends Component {
- 
+
   render() {
     return (
       <div>

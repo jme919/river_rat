@@ -31,7 +31,7 @@ class LoginPage extends Component {
     })
       .catch((error) => {
         if (error.response.status === 401) {
-          this.setState({ message: 'Login failed. Username or password not match' });
+          this.setState({ message: 'Login failed. Please try again.' });
         }
       });
   }
@@ -71,8 +71,8 @@ class LoginPage extends Component {
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     );
   }
 }

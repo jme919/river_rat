@@ -1,13 +1,12 @@
 #comments{
-
- background-color: rgba(250, 235, 215, 0.7);
-    text-align: center;
-    margin-top: px;
-    font-family: 'Neuton', serif;
-    font-size:25px;
-    color:black;
-    border-radius: 25px;
-    margin-bottom:25px;
-    padding:10px;
-    vertical-align: middle;
-    }
+  background-color: rgba(250, 235, 215, 0.7);
+  text-align: center;
+  margin-top: px;
+  font-family: 'Neuton', serif;
+  font-size:25px;
+  color:black;
+  border-radius: 25px;
+  margin-bottom:25px;
+  padding:10px;
+  vertical-align: middle;
+}
