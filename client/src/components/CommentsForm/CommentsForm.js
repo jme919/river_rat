@@ -47,11 +47,15 @@ class CommentsForm extends Component{
         }
         axios.post("/api/parkpage", data).then(res => {
         // this.props.history.push('/parkspage')
+        // this.props.history.push('/parks/:'+parkId)
+        window.location.reload()
         console.log(res);
         }).catch(err => {
         console.log(err);
         })
         console.log(data)
+        console.log("Park ID: "+parkId)
+        
     }
 
     render() {
