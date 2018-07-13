@@ -26,6 +26,7 @@ class SignupPage extends Component {
       username, email, password
     }
     axios.post("/auth/signup", data).then(res => {
+      this.props.history.push('/parkspage')
       console.log(res);
     }).catch(err => {
       console.log(err);
@@ -33,6 +34,15 @@ class SignupPage extends Component {
   }
 
   render() {
+    document.body.style.backgroundImage = 'url(/parkimages/river.jpeg)';
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    document.body.style.height = 100 + "%";
+    document.body.style.minHeight = 100 + "vh";
+    
     const {username, email, password} = this.state;
     return (
       <form method="POST" action="/submit">

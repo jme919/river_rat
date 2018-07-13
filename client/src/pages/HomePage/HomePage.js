@@ -65,17 +65,25 @@ class HomePage extends Component {
         API.getData()
             .then(res =>
 
-            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[10].value});
-            this.setState ({temp: res.data.value.timeSeries[0].values[0].value[10].value});
-            this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[10].value});
-            this.setState({speed: res.data.value.timeSeries[1].values[0].value[10].value});
-            console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[10].value)}
+            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[0].value});
+            this.setState ({temp: res.data.value.timeSeries[0].values[0].value[0].value});
+            this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[0].value});
+            this.setState({speed: res.data.value.timeSeries[1].values[0].value[0].value});
+            console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)}
           )
           .catch(err => console.log(err));
       };
 
       
     render(){
+        document.body.style.backgroundImage = 'url()';
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.margin = 0;
+        document.body.style.padding = 0;
+        document.body.style.height = 100 + "%";
+        document.body.style.minHeight = 100 + "vh";
         return (
             <ParallaxProvider>
                 <div>

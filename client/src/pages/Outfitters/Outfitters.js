@@ -10,6 +10,14 @@ class Outfitters extends Component {
     }
 
     render() {
+        document.body.style.backgroundImage = 'url(/parkimages/kayak.jpg)';
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.margin = 0;
+        document.body.style.padding = 0;
+        document.body.style.height = 100 + "%";
+        document.body.style.minHeight = 100 + "vh";
         return(
             <div>
                 <p className="outfitters-title">Outfitters</p>

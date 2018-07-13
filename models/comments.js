@@ -5,10 +5,15 @@ const Schema = mongoose.Schema;
 
 // Create the commentsSchema with the schema object
 const  commentsSchema = new Schema({
+    
     // The park that is associated with the comment
-    _parkId: {
+    parkId: {
         type: Number,
         
+    },
+
+    username:{
+        type:String,
     },
     // date is just a string
     date: {
@@ -16,7 +21,7 @@ const  commentsSchema = new Schema({
         default: Date.now
     },
     // text of the comment
-    commentText: String
+    comment: String
 });
 
 // Create the comments model using the commentsSchema
