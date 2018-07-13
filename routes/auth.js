@@ -20,7 +20,6 @@ router.post('/signup', function (req, res) {
     });
 
     // save the user
-
     newUser.save(function (err) {
       if (err) {
         //////////DEAL WITH ME BETTER////////////////////

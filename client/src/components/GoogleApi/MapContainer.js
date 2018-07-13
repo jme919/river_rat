@@ -36,7 +36,7 @@ class MapContainer extends Component {
     const mapCenter = { lat: 37.536578, lng: -77.478112 };
     
     return (
-      <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={13}>
+      <Map google={this.props.google} initialCenter={mapCenter} mapType="roadmap" zoom={12}>
         {this.state.locations.map((loc) => (
           <Marker key={loc._id} name={loc.name} title={loc.title} position={loc.location} onClick={(marker) => this.onMarkerClick(marker, loc)} />
         ))}
