@@ -34,7 +34,7 @@ router.get("api/park/:id", (req, res)=>{
 router.post("/parkpage", (req, res) => {
   const newComment = new Comment({
     username: req.body.username,
-    parkID: req.body.parkID,
+    parkId: req.body.parkId,
     comment: req.body.comment
   });
 

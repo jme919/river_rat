@@ -102,7 +102,7 @@ class ParkPage extends Component {
 
           </InfoBox>
           <CommentsForm 
-            parkID={this.state.parkID}
+            parkId={this.state.parkId}
           />
           <CommentsBox>
             <ul>

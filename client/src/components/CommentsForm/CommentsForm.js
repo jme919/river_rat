@@ -2,11 +2,10 @@ import React, {Component} from "react";
 import "./CommentsForm.css";
 import axios from "axios"
 
-class Comments extends Component{
+class CommentsForm extends Component{
 
     state={
         username: "",
-        parkID: "",
         comment: ""
     }
     //--trying to grab parkID so can be passed to our object, didn't work
@@ -37,14 +36,14 @@ class Comments extends Component{
 
     handleFormSubmit = () => {
         console.log("the button is working!!!!")
-        const { username, parkID, comment } = this.state;
+        const parkId = this.props.parkId;
+        const { username, comment } = this.state;
         this.setState({
             username: "",
-            parkID: "",
             comment: ""
         })
         const data = {
-        username, parkID, comment
+        username, parkId, comment
         }
         axios.post("/api/parkpage", data).then(res => {
         // this.props.history.push('/parkspage')
@@ -56,8 +55,7 @@ class Comments extends Component{
     }
 
     render() {
-
-        const {username, parkID, comment} = this.state;
+        const {username, comment} = this.state;
         return (
         <section>
             <div id="comments" className="container is-fluid">
@@ -95,4 +93,4 @@ class Comments extends Component{
     }
 }
 
-export default Comments
+export default CommentsForm
