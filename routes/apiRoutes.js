@@ -30,7 +30,6 @@ router.get("api/park/:id", (req, res)=>{
   res.json(object)
 })
 
-//this doesn't seem to be working
 router.post("/parkpage", (req, res) => {
   const newComment = new Comment({
     username: req.body.username,
@@ -48,23 +47,10 @@ router.post("/parkpage", (req, res) => {
   })
 })
 
-// router.post("/parkpage", (req, res) => {
-//   create: function(req, res) {
-//     const article = {
-//       username: req.body.username,
-//       parkID: req.body.headline.main,
-//       url: req.body.web_url
-//     };
-//     db.Article
-//       .create(article)
-//       .then(dbArticle => res.json(dbArticle))
-//       .catch(err => res.status(422).json(err));
-//   }
-// }  
-
-router.get("/api/comments/:id", (req, res) =>{
+router.get("/comments/:id", (req, res) =>{
   const parkId = req.params.id;
-  db.Comments.find({"parkId":parkId})
+  console.log(parkId)
+  db.Comments.find({parkId :parkId})
   .then(result=>{
     console.log("!!!! Here it is",result);
     res.json(result);

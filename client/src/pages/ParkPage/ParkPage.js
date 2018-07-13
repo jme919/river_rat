@@ -12,6 +12,17 @@ class ParkPage extends Component {
     parkId: "",
     comments:[]
   }
+
+  // fetchComments = (parkId) =>{
+  //   API.getComments(parkId).then(res=>{
+  //     console.log(res.data);
+  //     this.setState({comments:res.data});
+  //   }).catch(err => 
+  //     console.log(err));
+  // }
+
+
+
   componentDidMount = () => {
 
 
@@ -20,9 +31,11 @@ class ParkPage extends Component {
     console.log("I am here too" + parkId);
     console.log("I ame here!");
 
+    // fetchComments(parkId)
+
     API.getComments(parkId).then(res=>{
-      console.log(res);
-      // this.setState({comments:res});
+      console.log(res.data);
+      this.setState({comments:res.data});
     }).catch(err => 
       console.log(err));
 
@@ -31,7 +44,7 @@ class ParkPage extends Component {
       for (let index = 0; index < newArr.length; index++) {
         if (newArr[index].id == this.state.parkId) {
           this.setState({ park: newArr[index] }, () => {
-            console.log("It works!!!" + this.state.park)
+            console.log(this.state.park)
           })
         }
       }
@@ -106,10 +119,15 @@ class ParkPage extends Component {
           />
           <CommentsBox>
             <ul>
-              {/* {this.state.comment.map((commentInfo) =>
-              <li>{commentInfo.commentText}
-              </li>
-              )} */}
+              {this.state.comments.map((commentInfo) => 
+              <div>
+                <li> 
+                  {commentInfo.username}
+                  {commentInfo.comment}
+                  {commentInfo.date}
+                </li>
+              </div>  
+              )}
             </ul>
           </CommentsBox>
           
