@@ -3,7 +3,7 @@ const router = require("express").Router();
 const passport = require('passport');
 require('../config/passport')(passport);
 const Comment = require("../models/comments");
-const express = require("express")
+const express = require("express");
 const db = require("../models");
 
 router.get("/data", (req, res) => {
@@ -23,7 +23,7 @@ router.get("/parks", (req, res) => {
     .then((results) => console.log(results.data))
 })
 
-router.get("api/park/:id", (req, res)=>{
+router.get("/api/park/:id", (req, res)=>{
   const object = {
     park: req.params.id
   }
