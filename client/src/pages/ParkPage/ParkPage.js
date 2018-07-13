@@ -3,12 +3,14 @@ import parks from "../../parks.json";
 import ParkWrap from "./../../components/ParkWrap";
 import API from "./../../utils/API";
 import InfoBox from "./../../components/InfoBox";
-import Comments from "./../../components/CommentsForm";
+import CommentsForm from "./../../components/CommentsForm";
+import CommentsBox from "./../../components/CommentsBox";
 class ParkPage extends Component {
   state = {
     parkArr: parks,
     park: null,
-    parkId: ""
+    parkId: "",
+    comments:[]
   }
   componentDidMount = () => {
 
@@ -17,6 +19,12 @@ class ParkPage extends Component {
     const parkId = params.id;
     console.log("I am here too" + parkId);
     console.log("I ame here!");
+
+    API.getComments(parkId).then(res=>{
+      console.log(res);
+      // this.setState({comments:res});
+    }).catch(err => 
+      console.log(err));
 
     this.setState({ parkId: parkId }, () => {
       const newArr = this.state.parkArr;
@@ -62,7 +70,7 @@ class ParkPage extends Component {
 
       return (
         <div>
-          <div id="pImage" className="parkImage"></div>
+          
 
           <ParkWrap>
 
@@ -93,11 +101,22 @@ class ParkPage extends Component {
             </div>
 
           </InfoBox>
-          <Comments 
+          <CommentsForm 
             parkID={this.state.parkID}
           />
-
+          <CommentsBox>
+            <ul>
+              {/* {this.state.comment.map((commentInfo) =>
+              <li>{commentInfo.commentText}
+              </li>
+              )} */}
+            </ul>
+          </CommentsBox>
+          
+            
+          
         </div>
+        
       );
 
     } else {

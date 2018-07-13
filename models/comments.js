@@ -13,6 +13,10 @@ const  commentsSchema = new Schema({
         type: Number,
         
     },
+
+    username:{
+        type:String,
+    },
     // date is just a string
     date: {
         type: Date,

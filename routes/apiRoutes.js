@@ -4,7 +4,7 @@ const passport = require('passport');
 require('../config/passport')(passport);
 const Comment = require("../models/comments");
 const express = require("express")
-// const db = require("../models")
+const db = require("../models");
 
 router.get("/data", (req, res) => {
   axios
@@ -62,6 +62,15 @@ router.post("/parkpage", (req, res) => {
 //   }
 // }  
 
+router.get("/api/comments/:id", (req, res) =>{
+  const parkId = req.params.id;
+  db.Comments.find({"parkId":parkId})
+  .then(result=>{
+    console.log("!!!! Here it is",result);
+    res.json(result);
+  })
+  .catch(err=>res.status(500).json(err));
+})
 // router.post('/', passport.authenticate('jwt', { session: false }), function (req, res) {
 //   const token = getToken(req.headers);
 //   if (token) {
