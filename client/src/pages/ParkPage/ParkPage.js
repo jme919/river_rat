@@ -12,17 +12,6 @@ class ParkPage extends Component {
     parkId: "",
     comments:[]
   }
-
-  // fetchComments = (parkId) =>{
-  //   API.getComments(parkId).then(res=>{
-  //     console.log(res.data);
-  //     this.setState({comments:res.data});
-  //   }).catch(err => 
-  //     console.log(err));
-  // }
-
-
-
   componentDidMount = () => {
 
 
@@ -30,8 +19,6 @@ class ParkPage extends Component {
     const parkId = params.id;
     console.log("I am here too" + parkId);
     console.log("I ame here!");
-
-    // fetchComments(parkId)
 
     API.getComments(parkId).then(res=>{
       console.log(res.data);
@@ -44,7 +31,7 @@ class ParkPage extends Component {
       for (let index = 0; index < newArr.length; index++) {
         if (newArr[index].id == this.state.parkId) {
           this.setState({ park: newArr[index] }, () => {
-            console.log(this.state.park)
+            console.log("It works!!!" + this.state.park)
           })
         }
       }
@@ -119,14 +106,9 @@ class ParkPage extends Component {
           />
           <CommentsBox>
             <ul>
-              {this.state.comments.map((commentInfo) => 
-              <div>
-                <li> 
-                  {commentInfo.username}
-                  {commentInfo.comment}
-                  {commentInfo.date}
-                </li>
-              </div>  
+              {this.state.comments.map((commentInfo) =>
+
+                <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
               )}
             </ul>
           </CommentsBox>
