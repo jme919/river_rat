@@ -56,7 +56,7 @@ class HomePage extends Component {
         temp: "",
         clarity: "",
         speed: "",
-        title: ""
+        park: ""
     }
 
     componentDidMount() {
@@ -76,6 +76,7 @@ class HomePage extends Component {
             console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)}
           )
           .catch(err => console.log(err));
+          
       };
 
       
