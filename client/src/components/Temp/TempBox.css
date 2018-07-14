@@ -1,6 +1,18 @@
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: .8;
+      }
+    }
+
 .temp-databox {
+    animation: 2s ease-out .5s 1 slideUpFromBottom;
     position: absolute;
-    top: 800px;
+    top: 200px;
     width: 20%;
     left: 28%;
     text-align: center;
