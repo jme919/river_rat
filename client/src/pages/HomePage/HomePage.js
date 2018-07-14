@@ -5,6 +5,7 @@ import LevelBox from "../../components/LevelBox"
 import TempBox from "../../components/Temp/TempBox"
 import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
+import ParkWrap from "../../components/ParkWrap/ParkWrap"
 import "./HomePage.css"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax'
@@ -54,11 +55,14 @@ class HomePage extends Component {
         level: "",
         temp: "",
         clarity: "",
-        speed: ""
+        speed: "",
+        title: ""
     }
 
     componentDidMount() {
         this.loadRiverStats();
+        this.setState ({title: "River Rat"});
+        console.log(this.state.title);
     }
 
     loadRiverStats = () => {
@@ -89,6 +93,7 @@ class HomePage extends Component {
                 <div>
                     <Parallax>    
                         <div id="river-image" className="home-image parallax">
+                            <ParkWrap >{this.state.title}</ParkWrap>
                             <LevelBox className="w3-container w3-center w3-animate-opacity" level={this.state.level}/>
                             <TempBox temp={this.state.temp}/>
                             <ClarityBox clarity={this.state.clarity}/>
