@@ -33,9 +33,10 @@ class CommentsForm extends Component{
         const { name, value } = e.target;
         this.setState({ [name]: value });
     }
-
+    //make sure to include comments
     handleFormSubmit = () => {
-        console.log("the button is working!!!!")
+        //--delete this
+        //console.log("the button is working!!!!")
         const parkId = this.props.parkId;
         const { username, comment } = this.state;
         this.setState({
@@ -46,15 +47,13 @@ class CommentsForm extends Component{
         username, parkId, comment
         }
         axios.post("/api/parkpage", data).then(res => {
-        // this.props.history.push('/parkspage')
-        // this.props.history.push('/parks/:'+parkId)
-        window.location.reload()
-        console.log(res);
+            window.location.reload()
+            console.log(res);
         }).catch(err => {
-        console.log(err);
+            console.log(err);
         })
-        console.log(data)
-        console.log("Park ID: "+parkId)
+            console.log(data)
+            console.log("Park ID: "+parkId)
         
     }
 
