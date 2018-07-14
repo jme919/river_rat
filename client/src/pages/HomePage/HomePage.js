@@ -5,6 +5,7 @@ import LevelBox from "../../components/LevelBox"
 import TempBox from "../../components/Temp/TempBox"
 import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
+import ParkWrap from "../../components/ParkWrap/ParkWrap"
 import "./HomePage.css"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax'
@@ -54,11 +55,14 @@ class HomePage extends Component {
         level: "",
         temp: "",
         clarity: "",
-        speed: ""
+        speed: "",
+        park: ""
     }
 
     componentDidMount() {
         this.loadRiverStats();
+        this.setState ({title: "River Rat"});
+        console.log(this.state.title);
     }
 
     loadRiverStats = () => {
@@ -72,11 +76,12 @@ class HomePage extends Component {
             console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)}
           )
           .catch(err => console.log(err));
+          
       };
 
       
     render(){
-        document.body.style.backgroundImage = 'url()';
+        document.body.style.backgroundImage = 'url(/parkimages/truss.jpeg)';
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
@@ -89,6 +94,7 @@ class HomePage extends Component {
                 <div>
                     <Parallax>    
                         <div id="river-image" className="home-image parallax">
+                            <ParkWrap >{this.state.title}</ParkWrap>
                             <LevelBox className="w3-container w3-center w3-animate-opacity" level={this.state.level}/>
                             <TempBox temp={this.state.temp}/>
                             <ClarityBox clarity={this.state.clarity}/>

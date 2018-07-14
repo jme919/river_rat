@@ -3,7 +3,7 @@ const router = require("express").Router();
 const passport = require('passport');
 require('../config/passport')(passport);
 const Comment = require("../models/comments");
-const express = require("express")
+const express = require("express");
 const db = require("../models");
 
 router.get("/data", (req, res) => {
@@ -23,13 +23,14 @@ router.get("/parks", (req, res) => {
     .then((results) => console.log(results.data))
 })
 
-router.get("api/park/:id", (req, res)=>{
+router.get("/api/park/:id", (req, res)=>{
   const object = {
     park: req.params.id
   }
   res.json(object)
 })
 
+//this doesn't seem to be working
 router.post("/parkpage", (req, res) => {
   const newComment = new Comment({
     username: req.body.username,
@@ -47,12 +48,25 @@ router.post("/parkpage", (req, res) => {
   })
 })
 
+// router.post("/parkpage", (req, res) => {
+//   create: function(req, res) {
+//     const article = {
+//       username: req.body.username,
+//       parkID: req.body.headline.main,
+//       url: req.body.web_url
+//     };
+//     db.Article
+//       .create(article)
+//       .then(dbArticle => res.json(dbArticle))
+//       .catch(err => res.status(422).json(err));
+//   }
+// }  
+
 router.get("/comments/:id", (req, res) =>{
   const parkId = req.params.id;
-  console.log(parkId)
-  db.Comments.find({parkId :parkId})
+  db.Comments.find({parkId:parkId})
   .then(result=>{
-    console.log("!!!! Here it is",result);
+    console.log("Results",result);
     res.json(result);
   })
   .catch(err=>res.status(500).json(err));
