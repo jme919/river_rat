@@ -8,6 +8,7 @@ class NavBar extends Component {
     return (
       <div className="NavBar is-success">
         <NavBarLeft/>
+        <img src="/images/riverratlogorgb.png" id="logo" alt="River Rat Logo"/>
         <NavBarRight/>
       </div>
     );
