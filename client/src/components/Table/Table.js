@@ -16,7 +16,7 @@ const Table = props => (
 
                         <tbody>
                             <tr>
-                                <td><a href="parks/1">Pony Pasture</a></td>
+                                <td><a href="/parks/1">Pony Pasture</a></td>
                                 <td><a href="/parks/2">Pipeline</a></td>
                             </tr>
                             <tr>
