@@ -5,7 +5,8 @@ import axios from "axios";
 class LoginPage extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    message: ""
   }
 
   handleInputChange = e => {
@@ -13,7 +14,7 @@ class LoginPage extends Component {
     this.setState({ [name]: value });
   }
 
-  handleFormSubmit = () => {
+  handleFormLogin = () => {
     const { username, password } = this.state;
     this.setState({
       username: "",
@@ -22,31 +23,49 @@ class LoginPage extends Component {
     const data = {
       username, password
     }
-    axios.post("/auth/login", data).then(res => {
-      console.log(res);
-    }).catch(err => {
-      console.log(err);
+    console.log(data);
+    axios.post("/auth/login", data).then((result) => {
+      localStorage.setItem('jwtToken', result.data.token);
+      this.setState({ message: '' });
+      this.props.history.push('/parkspage')
     })
+      .catch((error) => {
+        if (error.response.status === 401) {
+          this.setState({ message: 'Login failed. Please try again.' });
+        }
+      });
   }
 
   render() {
+
+    document.body.style.backgroundImage = 'url(/parkimages/river.jpeg)';
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    document.body.style.height = 100 + "%";
+    document.body.style.minHeight = 100 + "vh";
+
     const { username, password } = this.state;
     return (
-      <div className="login-image">
-        <form method="POST" action="/login">
-          <div className="columns is-centered is-vcentered loginWrapper">
-            <div className="column is-4">
-              <h4> Login </h4>
-              <div className="field">
-                <div className="control has-icons-left has-icons-right">
-                  <input onChange={this.handleInputChange} value={username} className="input is-rounded is-success" name="username" type="username" placeholder="User Name" />
-                  <span className="icon is-medium is-left">
-                    <i className="fas fa-user"></i>
-                  </span>
-                  <span className="icon is-medium is-right">
-                    <i className="fas fa-check"></i>
-                  </span>
-                </div>
+      <form>
+        <div className="columns is-centered is-vcentered loginWrapper">
+          <div className="column is-4">
+            <h4> Login </h4>
+            {this.state.message.length
+              ? <div>{this.state.message}</div>
+              : null
+            }
+            <div className="field">
+              <div className="control has-icons-left has-icons-right">
+                <input onChange={this.handleInputChange} value={username} className="input is-rounded is-success" name="username" type="username" placeholder="User Name" />
+                <span className="icon is-medium is-left">
+                  <i className="fas fa-user"></i>
+                </span>
+                <span className="icon is-medium is-right">
+                  <i className="fas fa-check"></i>
+                </span>
               </div>
               <div className="field">
                 <p className="control has-icons-left">
@@ -62,8 +81,8 @@ class LoginPage extends Component {
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     );
   }
 }

@@ -2,6 +2,9 @@ const axios = require("axios");
 const router = require("express").Router();
 const passport = require('passport');
 require('../config/passport')(passport);
+const Comment = require("../models/comments");
+const express = require("express");
+const db = require("../models");
 
 router.get("/data", (req, res) => {
   axios
@@ -20,13 +23,40 @@ router.get("/parks", (req, res) => {
     .then((results) => console.log(results.data))
 })
 
-router.get("api/park/:id", (req, res)=>{
+router.get("/api/park/:id", (req, res)=>{
   const object = {
     park: req.params.id
   }
   res.json(object)
 })
 
+router.post("/parkpage", (req, res) => {
+  const newComment = new Comment({
+    username: req.body.username,
+    parkId: req.body.parkId,
+    comment: req.body.comment
+  });
+
+  newComment.save(function (err){
+    if (err) {
+      console.log(err);
+      res.status(500);
+      return
+    }
+    res.json({status: "okay"})
+  })
+})
+
+router.get("/comments/:id", (req, res) =>{
+  const parkId = req.params.id;
+  console.log(parkId)
+  db.Comments.find({parkId :parkId})
+  .then(result=>{
+    console.log("!!!! Here it is",result);
+    res.json(result);
+  })
+  .catch(err=>res.status(500).json(err));
+})
 // router.post('/', passport.authenticate('jwt', { session: false }), function (req, res) {
 //   const token = getToken(req.headers);
 //   if (token) {

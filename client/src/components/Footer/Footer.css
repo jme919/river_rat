@@ -1,3 +1,8 @@
 .footer-box{
     text-align: center;
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+    background: darkgray;
+    color: white
 }

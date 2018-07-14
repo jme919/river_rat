@@ -9,7 +9,13 @@ export default {
 
   getPark: function(){
     return axios.get("/api/park/:id")
-  }
+  },
+
+  getComments: function (id) {
+    return axios.get("/api/comments/" + id);
+  },
+
+  
 };
 
 

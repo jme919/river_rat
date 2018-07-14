@@ -13,7 +13,11 @@ import Outfitters from "./pages/Outfitters";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Footer from "./components/Footer/Footer"
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { fathermometerthreequarters } from '@fortawesome/free-solid-svg-icons'
 
+// library.add(fathermometerthreequarters)
 // import auth from "/routes/auth";
 // app.use('/api/auth', auth);
 
