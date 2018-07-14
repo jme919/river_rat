@@ -76,7 +76,7 @@ class HomePage extends Component {
 
       
     render(){
-        document.body.style.backgroundImage = 'url()';
+        document.body.style.backgroundImage = 'url(/parkimages/truss.jpeg)';
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
