@@ -13,6 +13,7 @@ export default {
 
   getComments: function (id) {
     return axios.get("/api/comments/" + id);
+    
   },
 
   
