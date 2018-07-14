@@ -88,15 +88,20 @@ class HomePage extends Component {
             <ParallaxProvider>
                 <div>
                     <Parallax>    
-                        <div id="river-image" className="home-image parallax"></div>
+                        <div id="river-image" className="home-image parallax">
+                            <LevelBox className="w3-container w3-center w3-animate-opacity" level={this.state.level}/>
+                            <TempBox temp={this.state.temp}/>
+                            <ClarityBox clarity={this.state.clarity}/>
+                            <SpeedBox speed={this.state.speed}/>
+                        </div>
                     </Parallax> 
                     <br />
                     <div id="data-box" className="home-data">
                         <Plx parallaxData={parallaxData}>
-                            <LevelBox level={this.state.level}/>
+                            {/* <LevelBox level={this.state.level}/>
                             <TempBox temp={this.state.temp}/>
                             <ClarityBox clarity={this.state.clarity}/>
-                            <SpeedBox speed={this.state.speed}/>
+                            <SpeedBox speed={this.state.speed}/> */}
                         </Plx>
                     </div>  
                 </div>

@@ -1,7 +1,7 @@
 .footer-box{
     text-align: center;
-    top: 195%;
-    position: absolute;
+    position: relative;
+    margin-top: 5%;
     width: 100%;
     background: darkgray;
     color: white

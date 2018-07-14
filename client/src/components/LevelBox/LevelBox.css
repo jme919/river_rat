@@ -1,6 +1,23 @@
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: .8;
+      }
+    }
+
+/* .level-databox {
+      This section calls the slideInFromLeft animation we defined above */
+  /* animation: 20s ease-out 0s 1 slideUpFromBottom;
+}     */
+
 .level-databox {
+    animation: 2s ease-out 0s 1 slideUpFromBottom;
     position: absolute;
-    top: 800px;
+    top: 200px;
     width: 20%;
     left: 4%;
     text-align: center;
