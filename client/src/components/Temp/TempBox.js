@@ -5,7 +5,7 @@ import LevelBox from "../LevelBox";
 
 const TempBox = props => (
     <div className="temp-databox">
-        <p className="temp-heading" >Temperature</p>
+        <p className="temp-heading" >River Temp</p>
         {/* <FontAwesomeIcon icon="fa-thermometer-three-quarters" />" /> */}
         <p className="temp-data">{(props.temp * 1.8 + 32).toFixed(2)}</p>
         <p className="temp-definition">&deg;F</p>

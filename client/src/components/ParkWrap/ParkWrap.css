@@ -7,3 +7,9 @@
     color:black;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 600px) {
+    #parkWrap{
+        font-size:50px;
+    }
+}

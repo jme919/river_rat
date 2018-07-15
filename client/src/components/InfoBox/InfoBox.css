@@ -23,6 +23,13 @@ div.info{
     margin-top:25px;
     color: rgb(31, 138, 12);
     font-size: 23px;
-    
+}
 
+  @media screen and (max-width: 600px) {
+      #infoBox{
+        font-size:20px;
+      }
+      div.info{
+        font-size: 18px;
+      }
   }
