@@ -12,6 +12,7 @@ class LoginPage extends Component {
   handleInputChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+    this.setState({ message: ""})
     //may be able to add code here to change message once a user starts typing: this.setState({message: ""}) to remove the message
   }
 
@@ -32,7 +33,7 @@ class LoginPage extends Component {
     })
       .catch((error) => {
         if (error.response.status === 401) {
-          this.setState({ message: 'Login failed. Please try again.' });
+          this.setState({ message: "Uh-oh, something went wrong.  Either try again or go to Sign Up to create an account" });
         }
       });
   }
@@ -53,11 +54,15 @@ class LoginPage extends Component {
       <form>
         <div className="columns is-centered is-vcentered loginWrapper">
           <div className="column is-4">
-            <h4> Login </h4>
             {this.state.message.length
-              ? <div>{this.state.message}</div>
+              ? <div className="has-text-weight-bold has-text-danger has-background-light">{this.state.message}</div>
               : null
             }
+            <h4> Login </h4>
+            {/* {this.state.message.length
+              ? <div className="has-text-weight-bold has-text-danger">{this.state.message}</div>
+              : null
+            } */}
             <div className="field">
               <div className="control has-icons-left has-icons-right">
                 <input onChange={this.handleInputChange} value={username} className="input is-rounded is-success" name="username" type="username" placeholder="User Name" />
