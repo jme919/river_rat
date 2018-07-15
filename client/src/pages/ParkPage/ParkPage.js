@@ -79,7 +79,7 @@ class ParkPage extends Component {
           </ParkWrap>
 
           <InfoBox>
-            <p>{this.state.park.word}</p>
+            <p className="parkDesc">{this.state.park.word}</p>
             <div className="info">
               <ul>
                 <li><span className="icon is-small is-left">
