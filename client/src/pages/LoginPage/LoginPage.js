@@ -12,6 +12,7 @@ class LoginPage extends Component {
   handleInputChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+    //may be able to add code here to change message once a user starts typing: this.setState({message: ""}) to remove the message
   }
 
   handleFormLogin = () => {

@@ -5,7 +5,7 @@ import React from "react";
 // import axios from "axios";
 import NavBar from "./components/NavBar";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ParksPage from "./pages/ParksPage";
 import ParkPage from "./pages/ParkPage";
@@ -58,11 +58,17 @@ import Footer from "./components/Footer/Footer"
           <NavBar />
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/parkspage" component={ParksPage} />
-            <Route path="/parks/:id" component={ParkPage} />
-            <Route path="/outfitters" component={Outfitters} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signup" component={SignupPage} />
+            <Route exact path="/parkspage" component={ParksPage} />
+            <Route path="/outfitters" component={Outfitters} />
+            <Route path="/parks/:id" render={() => (
+              localStorage.getItem("jwtToken") ? (
+                <Route path="/parks/:id" component={ParkPage}/>
+               ) : (
+                 <Redirect to="/login"/>
+               )
+            )}/>
           </Switch>
         </div>  
       </Router>
