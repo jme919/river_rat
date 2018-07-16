@@ -10,8 +10,7 @@ import "./HomePage.css"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax'
 import Plx from "react-plx"
-
-
+// import FontAwesome from 'font-awesome';
 
 // window.onscroll = function () {testFunction()};
 
@@ -74,12 +73,11 @@ class HomePage extends Component {
             this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[0].value});
             this.setState({speed: res.data.value.timeSeries[1].values[0].value[0].value});
             console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)}
-          )
-          .catch(err => console.log(err));
-          
-      };
+        )
+        .catch(err => console.log(err));
+        
+    };
 
-      
     render(){
         document.body.style.backgroundImage = 'url(/parkimages/truss.jpeg)';
         document.body.style.backgroundRepeat = "no-repeat";
