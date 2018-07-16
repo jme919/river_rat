@@ -5,12 +5,13 @@ import API from "./../../utils/API";
 import InfoBox from "./../../components/InfoBox";
 import CommentsForm from "./../../components/CommentsForm";
 import CommentsBox from "./../../components/CommentsBox";
+import moment from "moment";
 class ParkPage extends Component {
   state = {
     parkArr: parks,
     park: null,
     parkId: "",
-    comments:[]
+    comments: []
   }
   componentDidMount = () => {
 
@@ -20,10 +21,10 @@ class ParkPage extends Component {
     console.log("I am here too" + parkId);
     console.log("I ame here!");
 
-    API.getComments(parkId).then(res=>{
+    API.getComments(parkId).then(res => {
       console.log(res.data);
-      this.setState({comments:res.data});
-    }).catch(err => 
+      this.setState({ comments: res.data });
+    }).catch(err =>
       console.log(err));
 
     this.setState({ parkId: parkId }, () => {
@@ -70,7 +71,7 @@ class ParkPage extends Component {
 
       return (
         <div>
-          
+
 
           <ParkWrap>
 
@@ -79,7 +80,7 @@ class ParkPage extends Component {
           </ParkWrap>
 
           <InfoBox>
-            <p>{this.state.park.word}</p>
+            <p className="parkDesc">{this.state.park.word}</p>
             <div className="info">
               <ul>
                 <li><span className="icon is-small is-left">
@@ -101,30 +102,52 @@ class ParkPage extends Component {
             </div>
 
           </InfoBox>
-          <CommentsForm 
+          <CommentsForm
             parkId={this.state.parkId}
           />
-          <CommentsBox>
-            <ul>
+          {this.state.comments[0] ? (
+            <CommentsBox>
+
+
               {this.state.comments.map((commentInfo) =>
 
-                <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
-              )}
-            </ul>
-          </CommentsBox>
-          
-            
-          
-        </div>
-        
-      );
 
-    } else {
+
+
+                <section>
+                  <div id="commentsBox" className="container is-fluid ">
+                <div className="columns">
+                  <div className="column">
+                    <span className="icon is-small is-text is-success">
+                     
+                        
+                        <i className="fas fa-user" id="userIcon"></i>
+                        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.username}
+                  
+                </div>
+                    <div className="column">
+                      {commentInfo.comment}
+                    </div>
+                    <div className="column">
+                      {commentInfo.date}
+                    </div>
+                  </div>
+                  </div>
+                  </section> )}
+                    
+                  
+            </CommentsBox>
+              ) : (null)
+              }
+        </div>
+          );
+          } else {
       return (
         <h1>whoops!</h1>
-      )
+          )
+        }
+      }
     }
-  }
-}
-
+    
 export default ParkPage;
+// { moment(commentInfo.date).format("hh:mm A") }
