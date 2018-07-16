@@ -118,12 +118,8 @@ class ParkPage extends Component {
             </CommentsBox>
           ) : (null)
           }
-            
-          
         </div>
-        
       );
-
     } else {
       return (
         <h1>whoops!</h1>
