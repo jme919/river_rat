@@ -12,3 +12,9 @@
     width: 50%;
     position: relative;
 }
+
+@media screen and (max-width: 600px){
+  .mapWrapper > div:first-child{
+    width: 90%;
+  }
+}

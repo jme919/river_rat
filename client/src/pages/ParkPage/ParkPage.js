@@ -79,7 +79,7 @@ class ParkPage extends Component {
           </ParkWrap>
 
           <InfoBox>
-            <p>{this.state.park.word}</p>
+            <p className="parkDesc">{this.state.park.word}</p>
             <div className="info">
               <ul>
                 <li><span className="icon is-small is-left">
@@ -104,21 +104,22 @@ class ParkPage extends Component {
           <CommentsForm 
             parkId={this.state.parkId}
           />
-          <CommentsBox>
-            <ul>
-              {this.state.comments.map((commentInfo) =>
+          {this.state.comments[0] ? (
+            <CommentsBox>
+              
+                <ul>
+                  {this.state.comments.map((commentInfo) =>
 
-                <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
-              )}
-            </ul>
-          </CommentsBox>
-          
-            
-          
+                    <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
+                  )}
+                </ul>
+                
+              
+            </CommentsBox>
+          ) : (null)
+          }
         </div>
-        
       );
-
     } else {
       return (
         <h1>whoops!</h1>
