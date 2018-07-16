@@ -104,15 +104,20 @@ class ParkPage extends Component {
           <CommentsForm 
             parkId={this.state.parkId}
           />
-          <CommentsBox>
-            <ul>
-              {this.state.comments.map((commentInfo) =>
+          {this.state.comments[0] ? (
+            <CommentsBox>
+              
+                <ul>
+                  {this.state.comments.map((commentInfo) =>
 
-                <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
-              )}
-            </ul>
-          </CommentsBox>
-          
+                    <li><u>{commentInfo.username}</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.comment}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{commentInfo.date} </li>
+                  )}
+                </ul>
+                
+              
+            </CommentsBox>
+          ) : (null)
+          }
             
           
         </div>

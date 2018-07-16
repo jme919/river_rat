@@ -38,6 +38,10 @@ class LoginPage extends Component {
       });
   }
 
+  componentDidMount = () => (
+    localStorage.clear()
+  )
+
   render() {
 
     document.body.style.backgroundImage = 'url(/parkimages/river.jpeg)';
