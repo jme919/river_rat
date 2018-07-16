@@ -6,12 +6,34 @@ export class NavBarRight extends Component {
   render() {
     return (
       <div className="NavBarRight">
+        {localStorage.getItem("jwtToken") ? (
+            <Link to="/login">Sign Out</Link>
+          ) : (  
         <ul>
-          <li> <Link to="/login">Sign In</Link> </li>
+          <li>
+            <Link to="/login">Sign In</Link>
+          </li>
           <li>  |  </li>
           <li> <Link to="/signup">Sign Up</Link> </li>
         </ul>
+        )}
       </div>
     );
   }
 }
+
+{/* <ul>
+<li> {localStorage.getItem("jwtToken") ? (
+  <Link to="/login">Sign Out</Link>
+) : (
+  <Link to="/login">Sign In</Link>
+)}
+</li>
+  {localStorage.getItem("jwtToken") ? (
+    null
+  ) : (
+      <li>  |  </li>
+      <li> <Link to="/signup">Sign Up</Link> </li>
+  )
+  }
+</ul> */}
