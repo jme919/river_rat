@@ -59,9 +59,12 @@ class LoginPage extends Component {
         <div className="columns is-centered is-vcentered loginWrapper">
           <div className="column is-4">
             {this.state.message.length
-              ? <div className="has-text-weight-bold has-text-danger has-background-light">{this.state.message}</div>
+              ? <div className="errorBox has-text-weight-bold has-text-danger has-background-light">{this.state.message}</div>
               : null
             }
+
+            {/* <input class="input is-rounded" type="text" placeholder="Rounded input"> */}
+
             <h4> Login </h4>
             {/* {this.state.message.length
               ? <div className="has-text-weight-bold has-text-danger">{this.state.message}</div>

@@ -6,6 +6,7 @@ import TempBox from "../../components/Temp/TempBox"
 import ClarityBox from "../../components/Clarity/ClarityBox"
 import SpeedBox from "../../components/Speed/SpeedBox"
 import ParkWrap from "../../components/ParkWrap/ParkWrap"
+import Activities from "../../components/Activities"
 import "./HomePage.css"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax'
@@ -36,17 +37,6 @@ const parallaxData = [
             }
         ]
     },
-    // {
-    //     start: 700,
-    //     end: 800,
-    //     properties: [
-    //         {
-    //             startValue: 0,
-    //             endValue: 5,
-    //             property: "translateY"
-    //         }
-    //     ]
-    // }    
 ]
 
 class HomePage extends Component {
@@ -55,29 +45,71 @@ class HomePage extends Component {
         temp: "",
         clarity: "",
         speed: "",
-        park: ""
+        park: "",
+        fishing: "",
+        kayaking: "",
+        paddleboarding: "",
+        floating: ""
+    }
+
+    setActivities() {
+        console.log("Temp is" + this.state.clarity)
+        this.setState ({fishing: "Yes"})
+        this.setState ({kayaking: "Yes"})
+        this.setState ({paddleboarding: "Yes"})
+        this.setState ({floating: "Yes"})
+
+        this.state.clarity < 10 ?
+            this.setState ({fishing: "Yes"})
+            : this.setState ({fishing: "No"})
+        
+        this.state.temp > 21 ? 
+            this.setState ({kayaking: "Yes"})
+            : this.setState ({kayaking: "No"});
+        
+        this.state.level < 5 ? 
+            (this.state.temp > 21 ?
+                (this.state.speed < 5000 ?
+                    this.setState ({paddleboarding: "Yes"})
+                    :this.setState ({paddleboarding: "No"}))
+                :this.setState ({paddleboarding: "No"}))
+            :this.setState ({paddleboarding: "No"})
+            
+        this.state.level < 5 ? 
+            (this.state.temp > 21 ?
+                (this.state.speed < 5000 ?
+                    this.setState ({floating: "Yes"})
+                    :this.setState ({floating: "No"}))
+                :this.setState ({floating: "No"}))
+            :this.setState ({floating: "No"})    
     }
 
     componentDidMount() {
         this.loadRiverStats();
         this.setState ({title: "River Rat"});
-        console.log(this.state.title);
     }
+
+
 
     loadRiverStats = () => {
         API.getData()
             .then(res =>
-
-            {this.setState ({level: res.data.value.timeSeries[2].values[0].value[0].value});
-            this.setState ({temp: res.data.value.timeSeries[0].values[0].value[0].value});
-            this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[0].value});
-            this.setState({speed: res.data.value.timeSeries[1].values[0].value[0].value});
-            console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)}
+            {
+                this.setState ({level: res.data.value.timeSeries[2].values[0].value[0].value});
+                this.setState ({temp: res.data.value.timeSeries[0].values[0].value[0].value});
+                this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[0].value});
+                this.setState({speed: res.data.value.timeSeries[1].values[0].value[0].value});
+                console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)
+                this.setActivities()
+            },
+            
         )
-        .catch(err => console.log(err));
-        
+          .catch(err => console.log(err));
     };
 
+
+
+      
     render(){
         document.body.style.backgroundImage = 'url(/parkimages/truss.jpeg)';
         document.body.style.backgroundRepeat = "no-repeat";
@@ -97,15 +129,18 @@ class HomePage extends Component {
                             <TempBox temp={this.state.temp}/>
                             <ClarityBox clarity={this.state.clarity}/>
                             <SpeedBox speed={this.state.speed}/>
+                            <Activities 
+                                fishing={this.state.fishing} 
+                                kayaking={this.state.kayaking}
+                                paddleboarding={this.state.paddleboarding}
+                                floating={this.state.floating}
+                            />
                         </div>
                     </Parallax> 
                     <br />
                     <div id="data-box" className="home-data">
                         <Plx parallaxData={parallaxData}>
-                            {/* <LevelBox level={this.state.level}/>
-                            <TempBox temp={this.state.temp}/>
-                            <ClarityBox clarity={this.state.clarity}/>
-                            <SpeedBox speed={this.state.speed}/> */}
+                           
                         </Plx>
                     </div>  
                 </div>

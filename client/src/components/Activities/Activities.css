@@ -1,0 +1,79 @@
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: .8;
+      }
+    }
+    
+    .activities-box{
+        height: 200px;
+    }
+    
+    .activities-fishing {
+        position: absolute;
+        height: 40px;
+        left: 4%;
+        width: 20%;
+    }
+    
+    .activities-kayaking {
+        position: absolute;
+        left: 28%;
+        width: 20%;
+    }
+    
+    .activities-paddleboarding {
+        position: absolute;
+        left: 52%;
+        width: 20%;
+    }
+    
+    .activities-floating {
+        position: absolute;
+        left: 76%;
+        width: 20%;
+    }
+
+.activities-databox {
+    animation: 2s ease-out 2s 1 slideUpFromBottom;
+    position: absolute;
+    margin-top: 240px;
+    width: 92%;
+    left: 4%;
+    text-align: center;
+    height: 130px;
+
+    background-color: rgba(250, 235, 215, 0.7);
+    text-align: center;
+    font-family: 'Neuton', serif;
+    font-size:25px;
+    color:black;
+    border-radius: 25px;
+}
+
+.activities-heading{
+    font-size:35px;
+}
+
+@media screen and (max-width: 700px){
+    .activities-databox{
+        font-size: 18px;
+        height: 120px;
+        margin-top: 240px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .activities-databox{
+        font-size: 14px;
+        height: 100px;
+        margin-top: 510px;
+    }
+    .activities-heading{
+        font-size: 25px;
+    }
+}

@@ -5,6 +5,7 @@ import LevelBox from "../LevelBox";
 
 const TempBox = props => (
     <div className="temp-databox">
+        <i className="fas fa-thermometer-half"/>
         <p className="temp-heading" >River Temp</p>
         
         {/* <FontAwesomeIcon icon="fa-thermometer-three-quarters" />" /> */}
@@ -14,3 +15,4 @@ const TempBox = props => (
 )
 
 export default TempBox
+
