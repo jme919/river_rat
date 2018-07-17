@@ -54,34 +54,34 @@ class HomePage extends Component {
 
     setActivities() {
         console.log("Temp is" + this.state.clarity)
-        this.setState ({fishing: "Yes"})
-        this.setState ({kayaking: "Yes"})
+        this.setState ({fishing: "Drop a line"})
+        this.setState ({kayaking: "Get your paddle on"})
         this.setState ({paddleboarding: "Yes"})
         this.setState ({floating: "Yes"})
 
         this.state.clarity < 10 ?
-            this.setState ({fishing: "Yes"})
-            : this.setState ({fishing: "No"})
+            this.setState ({fishing: "Drop a line"})
+            : this.setState ({fishing: "Nope"})
         
         this.state.temp > 21 ? 
-            this.setState ({kayaking: "Yes"})
-            : this.setState ({kayaking: "No"});
+            this.setState ({kayaking: "Hit those rapids"})
+            : this.setState ({kayaking: "Negative"});
         
         this.state.level < 5 ? 
             (this.state.temp > 21 ?
                 (this.state.speed < 5000 ?
-                    this.setState ({paddleboarding: "Yes"})
-                    :this.setState ({paddleboarding: "No"}))
-                :this.setState ({paddleboarding: "No"}))
-            :this.setState ({paddleboarding: "No"})
+                    this.setState ({paddleboarding: "Get your paddle on"})
+                    :this.setState ({paddleboarding: "Nada"}))
+                :this.setState ({paddleboarding: "Nada"}))
+            :this.setState ({paddleboarding: "Nada"})
             
         this.state.level < 5 ? 
             (this.state.temp > 21 ?
                 (this.state.speed < 5000 ?
-                    this.setState ({floating: "Yes"})
-                    :this.setState ({floating: "No"}))
-                :this.setState ({floating: "No"}))
-            :this.setState ({floating: "No"})    
+                    this.setState ({floating: "Grab the cooler tube"})
+                    :this.setState ({floating: "No freaking way"}))
+                :this.setState ({floating: "No freaking way"}))
+            :this.setState ({floating: "No freaking way"})    
     }
 
     componentDidMount() {
@@ -150,21 +150,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
-            // <div>
-            //     <div className="home-image"></div>
-            //     <div className="home-data columns">
-            //         <div className="column">
-            //             <LevelBox level={this.state.level}/>
-            //         </div>    
-            //         <div className="column">
-            //             <TempBox temp={this.state.temp}/>
-            //         </div>
-            //         <div className="column">
-            //             <ClarityBox clarity={this.state.clarity}/>
-            //         </div>
-            //         <div className="column">
-            //             <SpeedBox speed={this.state.speed}/>
-            //         </div>
-            //     </div>  
-            // </div>        
