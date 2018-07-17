@@ -41,7 +41,7 @@
 .activities-databox {
     animation: 2s ease-out 2s 1 slideUpFromBottom;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 240px;
     width: 92%;
     left: 4%;
     text-align: center;
@@ -71,7 +71,7 @@
     .activities-databox{
         font-size: 14px;
         height: 100px;
-        margin-top: 240px;
+        margin-top: 510px;
     }
     .activities-heading{
         font-size: 25px;
