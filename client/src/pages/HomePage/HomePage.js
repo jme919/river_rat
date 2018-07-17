@@ -11,8 +11,7 @@ import "./HomePage.css"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax'
 import Plx from "react-plx"
-
-
+// import FontAwesome from 'font-awesome';
 
 // window.onscroll = function () {testFunction()};
 
