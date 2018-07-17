@@ -18,3 +18,10 @@
     height: 100%;
     min-height: 100vh;
 }
+
+.errorBox{
+    font-family: Neuton sans-serif;
+    /* border-radius: 25%; */
+    /* padding: 20px; */
+    /* height: 30px; */
+}
