@@ -59,10 +59,22 @@
     font-size:35px;
 }
 
+@media screen and (max-width: 1020px){
+    .activities-databox{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 815px){
+    .activities-databox{
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width: 700px){
     .activities-databox{
         font-size: 18px;
-        height: 120px;
+        height: 140px;
         margin-top: 240px;
     }
 }
