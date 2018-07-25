@@ -95,11 +95,11 @@ class HomePage extends Component {
         API.getData()
             .then(res =>
             {
-                this.setState ({level: res.data.value.timeSeries[2].values[0].value[0].value});
+                this.setState ({level: res.data.value.timeSeries[5].values[0].value[0].value});
                 this.setState ({temp: res.data.value.timeSeries[0].values[0].value[0].value});
                 this.setState ({clarity: res.data.value.timeSeries[3].values[0].value[0].value});
                 this.setState({speed: res.data.value.timeSeries[1].values[0].value[0].value});
-                console.log("The API response is: " + res.data.value.timeSeries[0].values[0].value[0].value)
+                console.log("The API response is: " + res.data.value.timeSeries[5].values[0].value[0].value)
                 this.setActivities()
             },
             

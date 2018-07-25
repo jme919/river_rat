@@ -8,7 +8,7 @@ const db = require("../models");
 
 router.get("/data", (req, res) => {
   axios
-    .get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02035000&period=PT4H&parameterCd=00060,00065,00010,63680&siteStatus=all")
+    .get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02035000,02037500&period=PT4H&parameterCd=00060,00065,00010,63680&siteStatus=all")
     //need to pass res.json(results.data<insert additional parmeters here>)
     .then((results) => 
       // console.log(results.data)
